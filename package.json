@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open --host",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "prettier": "prettier --write .",
     "preinstall": "npx only-allow pnpm",

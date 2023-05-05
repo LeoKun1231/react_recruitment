@@ -8,8 +8,6 @@
 import React, { memo } from 'react'
 import type { FC, ReactNode } from 'react'
 import { SectionHeaderWrapper } from './style'
-import { Button } from 'antd'
-import { SaveOutlined } from '@ant-design/icons'
 
 interface IProps {
   children?: ReactNode

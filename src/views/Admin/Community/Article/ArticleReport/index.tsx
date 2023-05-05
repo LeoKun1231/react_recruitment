@@ -1,3 +1,10 @@
+/*
+ * @Author: hqk
+ * @Date: 2023-05-05 13:17:39
+ * @LastEditors: hqk
+ * @LastEditTime: 2023-05-05 14:50:26
+ * @Description:
+ */
 import React, { forwardRef, memo, useImperativeHandle, useState } from 'react'
 import type { FC, ReactNode } from 'react'
 import { ArticleReportWrapper } from './style'
@@ -59,7 +66,7 @@ const ArticleReport = forwardRef<IHandler, IProps>((props, ref) => {
               <Checkbox onChange={(e) => handleChange(e, item.reportId)}></Checkbox>
               <Badge.Ribbon text={<div className="info">被举报次数：{item.reportCount}</div>}>
                 <div className="flex px-20px hover:bg-[#fafafa] hover:cursor-pointer w-full" onClick={() => handleArticleClick(item.id)}>
-                  <AppArticle item={item} isEdit={false} classname="w-[50%] overflow-hidden" />
+                  <AppArticle item={item as any} isEdit={false} classname="w-[50%] overflow-hidden" />
                   <div className="w-[50%] border  py-20px overflow-hidden">
                     <div className="font-600 text-[16px]">被举报原因</div>
                     <List className="mt-8px h-[180px] overflow-auto" size="small" split={false}>

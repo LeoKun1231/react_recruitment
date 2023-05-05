@@ -75,7 +75,7 @@ const AppArticleList: FC<IProps> = (props) => {
           )
         }>
         {articleList.length > 0
-          ? articleList.map((item, index) => {
+          ? articleList.map((item: any, index: any) => {
               return <AppArticle key={index} item={item} isShowTopic={!topicId} />
             })
           : !isArticleLoading && (

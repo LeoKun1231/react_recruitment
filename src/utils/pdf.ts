@@ -201,7 +201,7 @@ export async function outputPDF({ element, contentWidth = 592.28, footer, header
   }
 
   // 深度遍历节点的方法
-  traversingNodes(element.childNodes)
+  traversingNodes(element.childNodes as any)
   // 可能会存在遍历到底部元素为深度节点，可能存在最后一页位置未截取到的情况
   if (pages[pages.length - 1] + originalPageHeight < height) {
     pages.push(pages[pages.length - 1] + originalPageHeight)

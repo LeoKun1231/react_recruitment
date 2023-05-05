@@ -21,8 +21,6 @@ import useLike from '@/hooks/useLike'
 import AppConfirmModal from '../AppConfirmModal'
 import AppReportConfirm from '../AppReportConfirm'
 import classNames from 'classnames'
-import AppRoleControl from '../AppRoleControl'
-import AppRoleUserControl from '../AppRoleUserControl'
 import { ROLECODE } from '@/constant'
 
 interface IProps {

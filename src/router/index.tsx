@@ -1,45 +1,100 @@
+/*
+ * @Author: hqk
+ * @Date: 2023-02-16 11:20:26
+ * @LastEditors: hqk
+ * @LastEditTime: 2023-04-27 16:45:00
+ * @Description:
+ */
 import React, { lazy } from 'react'
-import { Navigate } from 'react-router-dom'
+import { Navigate, NonIndexRouteObject } from 'react-router-dom'
 
 import type { RouteObject } from 'react-router-dom'
 
-const Home = lazy(() => import('@/views/Home/index'))
-const HomeMessage = lazy(() => import('@/views/Home/c-cpns/HomeMessage/index'))
-const HomeCount = lazy(() => import('@/views/Home/c-cpns/HomeCount/index'))
-const About = lazy(() => import('@/views/About/index'))
+const Login = lazy(() => import('@/views/Login/index'))
+
+const Main = lazy(() => import('@/views/Main/index'))
+const Community = lazy(() => import('@/views/Main/Community/index'))
+const WriteArticle = lazy(() => import('@/views/Main/Community/c-cpns/WriteArticle'))
+const TopicDetail = lazy(() => import('@/views/Main/Community/c-cpns/TopicDetail'))
+const ArticleDetail = lazy(() => import('@/views/Main/Community/c-cpns/ArticleDetail'))
+
+const Home = lazy(() => import('@/views/Main/Home/index'))
+const Info = lazy(() => import('@/views/Main/Info/index'))
+const Mine = lazy(() => import('@/views/Main/Mine/index'))
 
 const NotFound = lazy(() => import('@/views/NotFound/index'))
+
+const JobList = lazy(() => import('@/views/Main/Home/c-cpns/JobList/index'))
+const CompanyDetail = lazy(() => import('@/views/Main/Home/c-cpns/CompanyDetail/index'))
+const JobDetail = lazy(() => import('@/views/Main/Home/c-cpns/JobDetail/index'))
+
+// type MyRouteObject = Omit<RouteObject, 'children'> | { children: MyRouteObject[] } | { meta: string }
 
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <Navigate to="/home" />
+    element: <Navigate to="/login" />
   },
   {
-    path: '/home',
-    element: <Home />,
+    path: '/main',
+    element: <Main />,
     children: [
       {
-        path: '/home',
-        element: <Navigate to="/home/message" />
+        path: '/main/home',
+        element: <Home />
       },
       {
-        path: '/home/message',
-        element: <HomeMessage />
+        path: '/main/home/jobList',
+        element: <JobList />
       },
       {
-        path: '/home/count',
-        element: <HomeCount />
+        path: '/main/home/company/detail',
+        element: <CompanyDetail />
       },
       {
-        path: '*',
-        element: <NotFound />
+        path: '/main/home/job/detail',
+        element: <JobDetail />
+      },
+      {
+        path: '/main/community',
+        element: <Community />,
+        children: [
+          {
+            path: '/main/community/writeArticle',
+            element: <WriteArticle />
+          },
+          {
+            path: '/main/community/topicDetail/:id',
+            element: <TopicDetail />
+          },
+          {
+            path: '/main/community/articleDeatil/:id',
+            element: <ArticleDetail />
+          }
+        ]
+      },
+      {
+        path: '/main/mine',
+        element: <Mine />
+      },
+      {
+        path: '/main/info',
+        element: <Info />
       }
     ]
   },
   {
-    path: '/about',
-    element: <About />
+    path: '/login',
+    element: <Login />
+  },
+
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
 ]
 

@@ -14,7 +14,11 @@ export interface AppInterceptors<T = AxiosResponse> {
   responseFailureFn?: (err: any) => any
 }
 
-export interface AppRequestConfig<T = AxiosResponse>
-  extends AxiosRequestConfig {
+export interface AppRequestConfig<T = AxiosResponse> extends AxiosRequestConfig {
   interceptors?: AppInterceptors<T>
+  isHidnLoading?: boolean
+}
+
+export interface CancelRequestSource {
+  [index: string]: () => void
 }

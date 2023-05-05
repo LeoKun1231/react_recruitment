@@ -1,45 +1,62 @@
+/*
+ * @Author: hqk
+ * @Date: 2023-02-16 11:20:26
+ * @LastEditors: hqk
+ * @LastEditTime: 2023-03-31 18:19:19
+ * @Description:
+ */
 import axios from 'axios'
 import type { AxiosInstance } from 'axios'
 import type { AppRequestConfig, AppInterceptors } from '../config/type'
+import { changeLoadingAction } from '@/store/features/common'
+import store from '@/store'
 
 class AppRequest {
   instance: AxiosInstance
   interceptors?: AppInterceptors
+  abortControllerMap: Map<string, AbortController>
   constructor(config: AppRequestConfig) {
     this.instance = axios.create(config)
+    // * 初始化存放取消请求控制器Map
+    this.abortControllerMap = new Map()
     this.interceptors = config.interceptors
     //全局拦截器
     this.instance.interceptors.request.use(
-      (config) => {
+      (config: any) => {
+        if (!config.isHidnLoading) {
+          store.dispatch(changeLoadingAction(true))
+        }
+        const controller = new AbortController()
+        const url = config.url || ''
+        config.signal = controller.signal
+        this.abortControllerMap.set(url, controller)
         // console.log('全局请求成功')
         return config
       },
       (err) => {
-        console.log('全局请求失败')
-
+        store.dispatch(changeLoadingAction(false))
+        // console.log('全局请求失败')
         return err
       }
     )
     this.instance.interceptors.response.use(
       (res) => {
         // console.log('全局响应成功')
+        const url = res.config.url || ''
+        this.abortControllerMap.delete(url)
+        store.dispatch(changeLoadingAction(false))
         return res.data
       },
       (err) => {
+        store.dispatch(changeLoadingAction(false))
         // console.log('全局响应成功')
         return err
       }
     )
 
     // 实例拦截器
-    this.instance.interceptors.request.use(
-      this.interceptors?.requestSuccessFn as any,
-      this.interceptors?.requestFailureFn
-    )
-    this.instance.interceptors.response.use(
-      this.interceptors?.responseSuccessFn,
-      this.interceptors?.responseFailureFn
-    )
+    this.instance.interceptors.request.use(this.interceptors?.requestSuccessFn as any, this.interceptors?.requestFailureFn)
+    this.instance.interceptors.response.use(this.interceptors?.responseSuccessFn, this.interceptors?.responseFailureFn)
   }
 
   request<T = any>(config: AppRequestConfig<T>) {
@@ -73,6 +90,29 @@ class AppRequest {
   }
   patch<T = any>(config: AppRequestConfig<T>) {
     return this.request({ ...config, method: 'PATCH' })
+  }
+  put<T = any>(config: AppRequestConfig<T>) {
+    return this.request({ ...config, method: 'PUT' })
+  }
+  /**
+   * 取消全部请求
+   */
+  cancelAllRequest() {
+    for (const [, controller] of this.abortControllerMap) {
+      controller.abort()
+    }
+    this.abortControllerMap.clear()
+  }
+  /**
+   * 取消指定的请求
+   * @param url 待取消的请求URL
+   */
+  cancelRequest(url: string | string[]) {
+    const urlList = Array.isArray(url) ? url : [url]
+    for (const _url of urlList) {
+      this.abortControllerMap.get(_url)?.abort()
+      this.abortControllerMap.delete(_url)
+    }
   }
 }
 

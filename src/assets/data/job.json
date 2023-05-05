@@ -1,0 +1,1302 @@
+[
+  {
+    "label": "技术",
+    "children": [
+      {
+        "label": "后端开发",
+        "children": [
+          { "label": "Java" },
+          { "label": "C++" },
+          { "label": "PHP" },
+          { "label": "C" },
+          { "label": "C#" },
+          { "label": ".NET" },
+          { "label": "Hadoop" },
+          { "label": "Python" },
+          { "label": "Delphi" },
+          { "label": "VB" },
+          { "label": "Perl" },
+          { "label": "Ruby" },
+          { "label": "Node.js" },
+          { "label": "Golang" },
+          { "label": "Erlang" },
+          { "label": "语音/视频/图形开发" },
+          { "label": "数据采集" },
+          { "label": "全栈工程师" },
+          { "label": "GIS工程师" },
+          { "label": "后端开发" }
+        ]
+      },
+      {
+        "label": "移动开发",
+        "children": [
+          { "label": "技术美术" },
+          { "label": "Android" },
+          { "label": "iOS" },
+          { "label": "Flash开发" },
+          { "label": "JavaScript" },
+          { "label": "UD" },
+          { "label": "Cocos" },
+          { "label": "UE" },
+          { "label": "移动开发" }
+        ]
+      },
+      {
+        "label": "测试",
+        "children": [
+          { "label": "测试工程师" },
+          { "label": "自动化测试" },
+          { "label": "功能测试" },
+          { "label": "性能测试" },
+          { "label": "测试开发" },
+          { "label": "移动端测试" },
+          { "label": "游戏测试" },
+          { "label": "硬件测试" },
+          { "label": "软件测试" },
+          { "label": "渗透测试" }
+        ]
+      },
+      {
+        "label": "运维/技术支持",
+        "children": [
+          { "label": "技术文档工程师" },
+          { "label": "运维工程师" },
+          { "label": "运维开发工程师" },
+          { "label": "网络工程师" },
+          { "label": "系统工程师" },
+          { "label": "IT技术支持" },
+          { "label": "系统管理员" },
+          { "label": "网络安全" },
+          { "label": "系统安全" },
+          { "label": "DBA" }
+        ]
+      },
+      {
+        "label": "数据",
+        "children": [
+          { "label": "ETL工程师" },
+          { "label": "数据仓库" },
+          { "label": "数据开发" },
+          { "label": "数据挖掘" },
+          { "label": "数据分析师" },
+          { "label": "数据架构师" }
+        ]
+      },
+      {
+        "label": "项目管理",
+        "children": [
+          { "label": "项目经理/主管" },
+          { "label": "项目助理" },
+          { "label": "项目专员" },
+          { "label": "实施顾问" },
+          { "label": "实施工程师" },
+          { "label": "需求分析工程师" },
+          { "label": "硬件项目经理" }
+        ]
+      },
+      {
+        "label": "硬件开发",
+        "children": [
+          { "label": "光学工程师" },
+          { "label": "硬件工程师" },
+          { "label": "嵌入式" },
+          { "label": "自动化" },
+          { "label": "单片机" },
+          { "label": "电路设计" },
+          { "label": "驱动开发" },
+          { "label": "系统集成" },
+          { "label": "FPGA开发" },
+          { "label": "DSP开发" },
+          { "label": "ARM开发" },
+          { "label": "PCB工艺" },
+          { "label": "射频工程师" }
+        ]
+      },
+      { "label": "前端开发", "children": [{ "label": "前端开发工程师" }, { "label": "Flash开发" }] },
+      {
+        "label": "通信",
+        "children": [
+          { "label": "通信技术工程师" },
+          { "label": "通信研发工程师" },
+          { "label": "数据通信工程师" },
+          { "label": "移动通信工程师" },
+          { "label": "电信网络工程师" },
+          { "label": "电信交换工程师" },
+          { "label": "有线传输工程师" },
+          { "label": "无线/射频通信工程师" },
+          { "label": "通信电源工程师" },
+          { "label": "通信标准化工程师" },
+          { "label": "通信项目专员" },
+          { "label": "通信项目经理" },
+          { "label": "核心网工程师" },
+          { "label": "通信测试工程师" },
+          { "label": "通信设备工程师" },
+          { "label": "光通信工程师" },
+          { "label": "光传输工程师" },
+          { "label": "光网络工程师" }
+        ]
+      },
+      {
+        "label": "电子/半导体",
+        "children": [
+          { "label": "版图设计工程师" },
+          { "label": "电气工程师" },
+          { "label": "电气设计工程师" },
+          { "label": "电子工程师" },
+          { "label": "集成电路IC设计" },
+          { "label": "FAE" },
+          { "label": "IC验证工程师" }
+        ]
+      },
+      {
+        "label": "高端技术职位",
+        "children": [
+          { "label": "技术经理" },
+          { "label": "技术总监" },
+          { "label": "测试经理" },
+          { "label": "架构师" },
+          { "label": "CTO" },
+          { "label": "运维总监" },
+          { "label": "技术合伙人" }
+        ]
+      },
+      {
+        "label": "人工智能",
+        "children": [
+          { "label": "数据挖掘" },
+          { "label": "搜索算法" },
+          { "label": "自然语言处理" },
+          { "label": "推荐算法" },
+          { "label": "算法工程师" },
+          { "label": "智能驾驶系统工程师" },
+          { "label": "反欺诈/风控算法" },
+          { "label": "机器学习" },
+          { "label": "深度学习" },
+          { "label": "语音识别" },
+          { "label": "图像识别" },
+          { "label": "算法研究员" }
+        ]
+      },
+      { "label": "销售技术支持", "children": [{ "label": "销售技术支持" }, { "label": "售前技术支持" }, { "label": "售后技术支持" }] },
+      { "label": "其他技术职位", "children": [{ "label": "其他技术职位" }] }
+    ]
+  },
+  {
+    "label": "产品",
+    "children": [
+      {
+        "label": "产品经理",
+        "children": [
+          { "label": "AI产品经理" },
+          { "label": "化妆品产品经理" },
+          { "label": "产品经理" },
+          { "label": "移动产品经理" },
+          { "label": "产品助理" },
+          { "label": "数据产品经理" },
+          { "label": "电商产品经理" },
+          { "label": "游戏策划" },
+          { "label": "产品专员" },
+          { "label": "硬件产品经理" }
+        ]
+      },
+      { "label": "高端产品职位", "children": [{ "label": "高级产品管理岗" }, { "label": "游戏制作人" }] },
+      { "label": "其他产品职位", "children": [{ "label": "其他产品职位" }] }
+    ]
+  },
+  {
+    "label": "设计",
+    "children": [
+      {
+        "label": "视觉/交互设计",
+        "children": [
+          { "label": "视觉设计师" },
+          { "label": "网页设计师" },
+          { "label": "Flash设计师" },
+          { "label": "UI设计师" },
+          { "label": "平面设计" },
+          { "label": "D设计师" },
+          { "label": "广告设计" },
+          { "label": "多媒体设计师" },
+          { "label": "原画师" },
+          { "label": "CAD设计/制图" },
+          { "label": "美工" },
+          { "label": "包装设计" },
+          { "label": "设计师助理" },
+          { "label": "动画设计" },
+          { "label": "插画师" },
+          { "label": "漫画师" },
+          { "label": "人像修图师" },
+          { "label": "交互设计师" }
+        ]
+      },
+      {
+        "label": "游戏设计",
+        "children": [
+          { "label": "系统策划" },
+          { "label": "游戏主美术" },
+          { "label": "游戏特效" },
+          { "label": "游戏界面设计师" },
+          { "label": "游戏场景" },
+          { "label": "游戏角色" },
+          { "label": "游戏动作" },
+          { "label": "游戏数值策划" }
+        ]
+      },
+      {
+        "label": "用户研究",
+        "children": [
+          { "label": "数据分析师" },
+          { "label": "用户研究员" },
+          { "label": "UX设计师" },
+          { "label": "用户研究经理" },
+          { "label": "用户研究总监" }
+        ]
+      },
+      { "label": "高端设计职位", "children": [{ "label": "设计经理/主管" }, { "label": "设计总监" }, { "label": "视觉设计总监" }] },
+      {
+        "label": "非视觉设计",
+        "children": [
+          { "label": "展览/展示设计" },
+          { "label": "照明设计" },
+          { "label": "服装/纺织设计" },
+          { "label": "工业设计" },
+          { "label": "橱柜设计" },
+          { "label": "家具设计" },
+          { "label": "家居设计" },
+          { "label": "珠宝设计" },
+          { "label": "室内设计" },
+          { "label": "陈列设计" }
+        ]
+      },
+      { "label": "其他设计职位", "children": [{ "label": "其他设计职位" }] }
+    ]
+  },
+  {
+    "label": "运营",
+    "children": [
+      {
+        "label": "运营",
+        "children": [
+          { "label": "淘宝运营" },
+          { "label": "天猫运营" },
+          { "label": "京东运营" },
+          { "label": "拼多多运营" },
+          { "label": "亚马逊运营" },
+          { "label": "速卖通运营" },
+          { "label": "阿里国际站运营" },
+          { "label": "亚马逊产品开发" },
+          { "label": "用户运营" },
+          { "label": "产品运营" },
+          { "label": "数据/策略运营" },
+          { "label": "内容运营" },
+          { "label": "活动运营" },
+          { "label": "商家运营" },
+          { "label": "品类运营" },
+          { "label": "游戏运营" },
+          { "label": "网站运营" },
+          { "label": "新媒体运营" },
+          { "label": "社区运营" },
+          { "label": "微信运营" },
+          { "label": "线下拓展运营" },
+          { "label": "国内电商运营" },
+          { "label": "运营助理/专员" },
+          { "label": "内容审核" },
+          { "label": "数据标注/AI训练师" },
+          { "label": "直播运营" },
+          { "label": "车辆运营" },
+          { "label": "跨境电商运营" },
+          { "label": "视频运营" }
+        ]
+      },
+      { "label": "编辑", "children": [{ "label": "主编/副主编" }, { "label": "文案编辑" }, { "label": "网站编辑" }, { "label": "采编" }] },
+      {
+        "label": "客服",
+        "children": [
+          { "label": "售前客服" },
+          { "label": "售后客服" },
+          { "label": "网络客服" },
+          { "label": "客服经理" },
+          { "label": "客服专员" },
+          { "label": "客服主管" },
+          { "label": "电话客服" },
+          { "label": "咨询热线/呼叫中心客服" }
+        ]
+      },
+      {
+        "label": "高端运营职位",
+        "children": [{ "label": "运营总监" }, { "label": "COO" }, { "label": "客服总监" }, { "label": "运营经理/主管" }]
+      },
+      { "label": "其他运营职位", "children": [{ "label": "其他运营职位" }] }
+    ]
+  },
+  {
+    "label": "市场",
+    "children": [
+      { "label": "政府事务", "children": [{ "label": "社工" }, { "label": "政府关系" }, { "label": "政策研究" }, { "label": "企业党建" }] },
+      {
+        "label": "市场/营销",
+        "children": [
+          { "label": "信息流优化师" },
+          { "label": "网络推广" },
+          { "label": "市场营销" },
+          { "label": "市场策划" },
+          { "label": "市场顾问" },
+          { "label": "市场推广" },
+          { "label": "SEO" },
+          { "label": "SEM" },
+          { "label": "商务渠道" },
+          { "label": "商业数据分析" },
+          { "label": "活动策划" },
+          { "label": "网络营销" },
+          { "label": "海外市场" },
+          { "label": "APP推广" },
+          { "label": "选址开发" },
+          { "label": "游戏推广" },
+          { "label": "营销主管" }
+        ]
+      },
+      {
+        "label": "公关媒介",
+        "children": [
+          { "label": "媒介经理" },
+          { "label": "广告客户执行" },
+          { "label": "品牌公关" },
+          { "label": "媒介专员" },
+          { "label": "活动策划执行" },
+          { "label": "媒介策划" }
+        ]
+      },
+      {
+        "label": "会务会展",
+        "children": [{ "label": "会议活动策划" }, { "label": "会议活动执行" }, { "label": "会展活动策划" }, { "label": "会展活动执行" }]
+      },
+      {
+        "label": "广告",
+        "children": [
+          { "label": "广告/会展项目经理" },
+          { "label": "广告创意设计" },
+          { "label": "美术指导" },
+          { "label": "广告设计" },
+          { "label": "策划经理" },
+          { "label": "广告文案" },
+          { "label": "广告制作" },
+          { "label": "媒介投放" },
+          { "label": "媒介合作" },
+          { "label": "广告审核" }
+        ]
+      },
+      {
+        "label": "高端市场职位",
+        "children": [{ "label": "市场总监" }, { "label": "CMO" }, { "label": "公关总监" }, { "label": "媒介总监" }, { "label": "创意总监" }]
+      },
+      { "label": "其他市场职位", "children": [{ "label": "其他市场职位" }] }
+    ]
+  },
+  {
+    "label": "人事/财务/行政",
+    "children": [
+      {
+        "label": "人力资源",
+        "children": [
+          { "label": "企业文化" },
+          { "label": "招聘" },
+          { "label": "HRBP" },
+          { "label": "人力资源专员/助理" },
+          { "label": "培训" },
+          { "label": "薪酬绩效" },
+          { "label": "人力资源经理/主管" },
+          { "label": "人力资源总监" },
+          { "label": "员工关系" },
+          { "label": "组织发展" }
+        ]
+      },
+      {
+        "label": "行政",
+        "children": [
+          { "label": "文员" },
+          { "label": "行政专员/助理" },
+          { "label": "前台" },
+          { "label": "经理助理" },
+          { "label": "后勤" },
+          { "label": "行政经理/主管" },
+          { "label": "行政总监" }
+        ]
+      },
+      {
+        "label": "财务",
+        "children": [
+          { "label": "建筑/工程会计" },
+          { "label": "税务外勤会计" },
+          { "label": "统计员" },
+          { "label": "财务分析/财务BP" },
+          { "label": "会计" },
+          { "label": "出纳" },
+          { "label": "财务顾问" },
+          { "label": "结算会计" },
+          { "label": "税务" },
+          { "label": "审计" },
+          { "label": "成本会计" },
+          { "label": "总账会计" },
+          { "label": "财务经理/主管" },
+          { "label": "CFO" },
+          { "label": "财务总监/VP" }
+        ]
+      },
+      {
+        "label": "法务",
+        "children": [
+          { "label": "法务专员/助理" },
+          { "label": "律师" },
+          { "label": "法律顾问" },
+          { "label": "法务经理/主管" },
+          { "label": "法务总监" }
+        ]
+      },
+      { "label": "其他职能职位", "children": [{ "label": "其他职能职位" }] }
+    ]
+  },
+  {
+    "label": "高级管理",
+    "children": [
+      {
+        "label": "高级管理职位",
+        "children": [
+          { "label": "高级管理职位" },
+          { "label": "总裁/总经理/CEO" },
+          { "label": "副总裁/副总经理/VP" },
+          { "label": "分公司/代表处负责人" },
+          { "label": "区域负责人(辖多个分公司)" },
+          { "label": "总助/CEO助理/董事长助理" },
+          { "label": "联合创始人" },
+          { "label": "董事会秘书" }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "销售",
+    "children": [
+      {
+        "label": "销售行政/商务",
+        "children": [
+          { "label": "商务专员" },
+          { "label": "商务经理" },
+          { "label": "客户成功" },
+          { "label": "销售助理" },
+          { "label": "商务总监" },
+          { "label": "销售运营" }
+        ]
+      },
+      {
+        "label": "房地产销售/招商",
+        "children": [{ "label": "置业顾问" }, { "label": "地产中介" }, { "label": "物业招商管理" }, { "label": "房地产销售总监" }]
+      },
+      {
+        "label": "服务业销售",
+        "children": [
+          { "label": "服装导购" },
+          { "label": "化妆品导购" },
+          { "label": "美容顾问" },
+          { "label": "会籍顾问" },
+          { "label": "珠宝销售" },
+          { "label": "旅游顾问" },
+          { "label": "瘦身顾问" }
+        ]
+      },
+      { "label": "汽车销售", "children": [{ "label": "汽车销售" }, { "label": "汽车配件销售" }] },
+      { "label": "广告/会展销售", "children": [{ "label": "广告销售" }, { "label": "会议活动销售" }, { "label": "会展活动销售" }] },
+      {
+        "label": "金融销售",
+        "children": [{ "label": "证券经纪人" }, { "label": "信用卡销售" }, { "label": "保险顾问" }, { "label": "理财顾问" }]
+      },
+      { "label": "外贸销售", "children": [{ "label": "外贸经理" }, { "label": "外贸业务员" }] },
+      {
+        "label": "销售",
+        "children": [
+          { "label": "销售专员" },
+          { "label": "客户代表" },
+          { "label": "大客户代表" },
+          { "label": "BD经理" },
+          { "label": "渠道销售" },
+          { "label": "代理商销售" },
+          { "label": "电话销售" },
+          { "label": "销售顾问" },
+          { "label": "网络销售" },
+          { "label": "销售工程师" },
+          { "label": "客户经理" }
+        ]
+      },
+      { "label": "课程销售", "children": [{ "label": "课程顾问" }, { "label": "招生顾问" }, { "label": "留学顾问" }] },
+      {
+        "label": "医疗销售",
+        "children": [
+          { "label": "口腔咨询师" },
+          { "label": "医疗器械销售" },
+          { "label": "医药代表" },
+          { "label": "健康顾问" },
+          { "label": "医美咨询" }
+        ]
+      },
+      {
+        "label": "销售管理",
+        "children": [
+          { "label": "销售经理" },
+          { "label": "销售总监" },
+          { "label": "区域总监" },
+          { "label": "城市经理" },
+          { "label": "销售VP" },
+          { "label": "团队经理" }
+        ]
+      },
+      { "label": "其他销售职位", "children": [{ "label": "其他销售职位" }] }
+    ]
+  },
+  {
+    "label": "传媒",
+    "children": [
+      {
+        "label": "采编/写作/出版",
+        "children": [
+          { "label": "印刷排版" },
+          { "label": "记者/采编" },
+          { "label": "编辑" },
+          { "label": "作者/撰稿人" },
+          { "label": "出版发行" },
+          { "label": "校对录入" }
+        ]
+      },
+      {
+        "label": "公关媒介",
+        "children": [
+          { "label": "媒介经理" },
+          { "label": "媒介专员" },
+          { "label": "广告客户执行" },
+          { "label": "品牌公关" },
+          { "label": "活动策划执行" },
+          { "label": "媒介策划" }
+        ]
+      },
+      {
+        "label": "广告",
+        "children": [
+          { "label": "广告/会展项目经理" },
+          { "label": "广告创意设计" },
+          { "label": "美术指导" },
+          { "label": "广告设计" },
+          { "label": "策划经理" },
+          { "label": "广告文案" },
+          { "label": "广告制作" },
+          { "label": "媒介投放" },
+          { "label": "媒介合作" },
+          { "label": "广告审核" }
+        ]
+      },
+      {
+        "label": "影视媒体",
+        "children": [
+          { "label": "带货主播" },
+          { "label": "剧本杀主持人" },
+          { "label": "剧本杀编剧" },
+          { "label": "儿童引导师" },
+          { "label": "艺人助理" },
+          { "label": "主持人/DJ" },
+          { "label": "主播助理" },
+          { "label": "灯光师" },
+          { "label": "剪辑师" },
+          { "label": "影视特效" },
+          { "label": "导演/编导" },
+          { "label": "摄影/摄像" },
+          { "label": "视频编辑" },
+          { "label": "音频编辑" },
+          { "label": "经纪人" },
+          { "label": "后期制作" },
+          { "label": "影视发行" },
+          { "label": "影视策划" },
+          { "label": "主播" },
+          { "label": "演员/配音/模特" },
+          { "label": "化妆/造型/服装" },
+          { "label": "放映员" },
+          { "label": "录音/音效" },
+          { "label": "制片人" },
+          { "label": "编剧" }
+        ]
+      },
+      { "label": "其他传媒职位", "children": [{ "label": "其他传媒职位" }] }
+    ]
+  },
+  {
+    "label": "金融",
+    "children": [
+      {
+        "label": "证券/基金/期货",
+        "children": [
+          { "label": "买方分析师" },
+          { "label": "基金经理" },
+          { "label": "投资银行业务" },
+          { "label": "量化研究员" },
+          { "label": "卖方分析师" },
+          { "label": "证券交易员" }
+        ]
+      },
+      {
+        "label": "投融资",
+        "children": [
+          { "label": "投资者关系/证券事务代表" },
+          { "label": "投资经理" },
+          { "label": "行业研究" },
+          { "label": "投资总监/VP" },
+          { "label": "融资" },
+          { "label": "并购" },
+          { "label": "投后管理" },
+          { "label": "投资助理" },
+          { "label": "其他投融资职位" }
+        ]
+      },
+      { "label": "银行", "children": [{ "label": "柜员" }, { "label": "客户经理" }, { "label": "银行大堂经理" }, { "label": "信贷专员" }] },
+      { "label": "保险", "children": [{ "label": "保险精算师" }, { "label": "保险理赔" }] },
+      {
+        "label": "中后台",
+        "children": [
+          { "label": "风控" },
+          { "label": "金融产品经理" },
+          { "label": "法务" },
+          { "label": "资信评估" },
+          { "label": "催收员" },
+          { "label": "资产评估" },
+          { "label": "合规稽查" },
+          { "label": "清算" }
+        ]
+      },
+      { "label": "其他金融职位", "children": [{ "label": "其他金融职位" }] }
+    ]
+  },
+  {
+    "label": "教育培训",
+    "children": [
+      {
+        "label": "教育产品研发",
+        "children": [
+          { "label": "课程设计" },
+          { "label": "课程编辑" },
+          { "label": "培训研究" },
+          { "label": "培训师" },
+          { "label": "培训策划" },
+          { "label": "其他教育产品研发职位" }
+        ]
+      },
+      {
+        "label": "教育行政",
+        "children": [
+          { "label": "园长/副园长" },
+          { "label": "校长/副校长" },
+          { "label": "教务管理" },
+          { "label": "教学管理" },
+          { "label": "班主任/辅导员" }
+        ]
+      },
+      {
+        "label": "教师",
+        "children": [
+          { "label": "地理老师" },
+          { "label": "教师" },
+          { "label": "感统训练教师" },
+          { "label": "日语教师" },
+          { "label": "其他外语教师" },
+          { "label": "语文教师" },
+          { "label": "数学教师" },
+          { "label": "物理教师" },
+          { "label": "化学教师" },
+          { "label": "生物教师" },
+          { "label": "家教" },
+          { "label": "托管老师" },
+          { "label": "早教老师" },
+          { "label": "助教" },
+          { "label": "高中教师" },
+          { "label": "初中教师" },
+          { "label": "小学教师" },
+          { "label": "幼教" },
+          { "label": "理科教师" },
+          { "label": "文科教师" },
+          { "label": "英语教师" },
+          { "label": "音乐教师" },
+          { "label": "美术教师" },
+          { "label": "体育教师/体育教练" },
+          { "label": "就业老师" }
+        ]
+      },
+      {
+        "label": "IT培训",
+        "children": [
+          { "label": "JAVA培训讲师" },
+          { "label": "Android培训讲师" },
+          { "label": "iOS培训讲师" },
+          { "label": "PHP培训讲师" },
+          { "label": ".NET培训讲师" },
+          { "label": "C++培训讲师" },
+          { "label": "Unity D培训讲师" },
+          { "label": "Web前端培训讲师" },
+          { "label": "软件测试培训讲师" },
+          { "label": "动漫培训讲师" },
+          { "label": "UI设计培训讲师" }
+        ]
+      },
+      { "label": "职业培训", "children": [{ "label": "财会培训讲师" }, { "label": "培训师" }, { "label": "拓展培训" }] },
+      {
+        "label": "特长培训",
+        "children": [
+          { "label": "少儿编程老师" },
+          { "label": "乒乓球教练" },
+          { "label": "羽毛球教练" },
+          { "label": "足球教练" },
+          { "label": "架子鼓老师" },
+          { "label": "武术教练" },
+          { "label": "轮滑教练" },
+          { "label": "表演教师" },
+          { "label": "机器人教师" },
+          { "label": "书法教师" },
+          { "label": "钢琴教师" },
+          { "label": "吉他教师" },
+          { "label": "古筝教师" },
+          { "label": "播音主持教师" },
+          { "label": "乐高教师" },
+          { "label": "舞蹈老师" },
+          { "label": "瑜伽老师" },
+          { "label": "游泳教练" },
+          { "label": "健身教练" },
+          { "label": "篮球教练" },
+          { "label": "跆拳道教练" }
+        ]
+      },
+      { "label": "其他教育培训职位", "children": [{ "label": "其他教育培训职位" }] }
+    ]
+  },
+  {
+    "label": "医疗健康",
+    "children": [
+      {
+        "label": "临床试验",
+        "children": [
+          { "label": "临床监查员" },
+          { "label": "临床医学经理/专员" },
+          { "label": "临床协调员" },
+          { "label": "临床数据分析" },
+          { "label": "临床项目经理" },
+          { "label": "临床医学总监" }
+        ]
+      },
+      {
+        "label": "医生/医技",
+        "children": [
+          { "label": "其他医生职位" },
+          { "label": "幼儿园保健医" },
+          { "label": "外科医生" },
+          { "label": "儿科医生" },
+          { "label": "妇产科医生" },
+          { "label": "眼科医生" },
+          { "label": "皮肤科医生" },
+          { "label": "耳鼻喉科医生" },
+          { "label": "麻醉科医生" },
+          { "label": "病理科医生" },
+          { "label": "医务管理" },
+          { "label": "医生助理" },
+          { "label": "放射科医生" },
+          { "label": "超声科医生" },
+          { "label": "内科医生" },
+          { "label": "全科医生" },
+          { "label": "中医" },
+          { "label": "整形医生" },
+          { "label": "精神心理科医生" },
+          { "label": "药剂师" },
+          { "label": "口腔科医生" },
+          { "label": "验光师" },
+          { "label": "检验科医师" }
+        ]
+      },
+      { "label": "护士/护理", "children": [{ "label": "护士长" }, { "label": "护士" }, { "label": "导医" }] },
+      { "label": "健康整形", "children": [{ "label": "营养师/健康管理师" }, { "label": "康复治疗师" }] },
+      {
+        "label": "生物制药",
+        "children": [
+          { "label": "细胞培养员" },
+          { "label": "药物分析" },
+          { "label": "药物合成" },
+          { "label": "医疗产品技术支持" },
+          { "label": "生物信息工程师" },
+          { "label": "生物学研究人员" },
+          { "label": "药品注册" },
+          { "label": "药品生产" },
+          { "label": "医药项目经理" },
+          { "label": "医药研发" }
+        ]
+      },
+      {
+        "label": "医疗器械",
+        "children": [
+          { "label": "试剂研发" },
+          { "label": "医疗器械注册" },
+          { "label": "医疗器械生产/质量管理" },
+          { "label": "医疗器械研发" }
+        ]
+      },
+      { "label": "药店", "children": [{ "label": "药店店长" }, { "label": "执业药师/驻店药师" }, { "label": "药店店员" }] },
+      { "label": "其他医疗健康职位", "children": [{ "label": "医学编辑" }, { "label": "其他医疗健康职位" }] }
+    ]
+  },
+  {
+    "label": "采购/贸易",
+    "children": [
+      {
+        "label": "采购",
+        "children": [
+          { "label": "招标专员" },
+          { "label": "投标专员" },
+          { "label": "商品经理" },
+          { "label": "供应商质量工程师" },
+          { "label": "采购总监" },
+          { "label": "采购经理/主管" },
+          { "label": "采购专员/助理" },
+          { "label": "买手" },
+          { "label": "采购工程师" }
+        ]
+      },
+      { "label": "进出口贸易", "children": [{ "label": "贸易跟单" }, { "label": "报关/报检员" }, { "label": "单证员" }] },
+      { "label": "其他采购/贸易职位", "children": [{ "label": "其他采购/贸易类职位" }] }
+    ]
+  },
+  {
+    "label": "供应链/物流",
+    "children": [
+      {
+        "label": "物流",
+        "children": [
+          { "label": "配送站长" },
+          { "label": "供应链专员" },
+          { "label": "供应链经理" },
+          { "label": "集装箱管理" },
+          { "label": "物流专员" },
+          { "label": "物流经理" },
+          { "label": "物流运营" },
+          { "label": "物流跟单" },
+          { "label": "调度员" },
+          { "label": "物流/仓储项目经理" },
+          { "label": "货运代理专员" },
+          { "label": "货运代理经理" },
+          { "label": "水/空/陆运操作" }
+        ]
+      },
+      {
+        "label": "仓储",
+        "children": [{ "label": "仓库经理" }, { "label": "仓库管理员" }, { "label": "仓库文员" }, { "label": "配/理/拣/发货" }]
+      },
+      {
+        "label": "交通/运输",
+        "children": [
+          { "label": "无人机飞手" },
+          { "label": "商务司机" },
+          { "label": "网约车司机" },
+          { "label": "代驾司机" },
+          { "label": "驾校教练" },
+          { "label": "货运司机" },
+          { "label": "配送员" },
+          { "label": "快递员" },
+          { "label": "运输经理/主管" }
+        ]
+      },
+      { "label": "高端供应链职位", "children": [{ "label": "供应链总监" }, { "label": "物流总监" }] }
+    ]
+  },
+  {
+    "label": "房地产/建筑",
+    "children": [
+      { "label": "装饰装修", "children": [{ "label": "室内设计" }, { "label": "软装设计师" }, { "label": "装修项目经理" }] },
+      {
+        "label": "工程管理",
+        "children": [
+          { "label": "工程监理" },
+          { "label": "工程造价" },
+          { "label": "工程预算" },
+          { "label": "资料员" },
+          { "label": "建筑施工项目经理" },
+          { "label": "施工员" },
+          { "label": "测绘/测量" },
+          { "label": "材料员" },
+          { "label": "施工安全员" }
+        ]
+      },
+      {
+        "label": "房地产规划开发",
+        "children": [{ "label": "房地产策划" }, { "label": "地产项目管理" }, { "label": "地产招投标" }, { "label": "房产评估师" }]
+      },
+      {
+        "label": "建筑/规划设计",
+        "children": [
+          { "label": "建筑工程师" },
+          { "label": "建筑设计师" },
+          { "label": "土木/土建/结构工程师" },
+          { "label": "园林/景观设计" },
+          { "label": "城市规划设计" },
+          { "label": "弱电工程师" },
+          { "label": "给排水工程师" },
+          { "label": "暖通工程师" },
+          { "label": "幕墙工程师" },
+          { "label": "BIM工程师" },
+          { "label": "建筑机电工程师" },
+          { "label": "消防工程师" }
+        ]
+      },
+      {
+        "label": "物业管理",
+        "children": [{ "label": "物业经理" }, { "label": "综合维修工" }, { "label": "绿化工" }, { "label": "物业管理员" }]
+      },
+      { "label": "高端房地产职位", "children": [{ "label": "地产项目总监" }, { "label": "地产策划总监" }, { "label": "地产招投标总监" }] },
+      { "label": "其他房地产职位", "children": [{ "label": "其他房地产职位" }] }
+    ]
+  },
+  {
+    "label": "农/林/牧/渔",
+    "children": [
+      { "label": "农业/林业", "children": [{ "label": "农业/林业技术员" }] },
+      { "label": "畜牧/渔业", "children": [{ "label": "饲养员" }, { "label": "禽畜/水产养殖技术员" }, { "label": "畜牧兽医" }] }
+    ]
+  },
+  {
+    "label": "咨询/翻译/法律",
+    "children": [
+      {
+        "label": "咨询/调研",
+        "children": [
+          { "label": "知识产权/专利/商标代理人" },
+          { "label": "心理咨询师" },
+          { "label": "婚恋咨询师" },
+          { "label": "企业管理咨询" },
+          { "label": "咨询总监" },
+          { "label": "数据分析师" },
+          { "label": "咨询经理" },
+          { "label": "财务咨询顾问" },
+          { "label": "IT咨询顾问" },
+          { "label": "人力资源咨询顾问" },
+          { "label": "咨询项目管理" },
+          { "label": "战略咨询" },
+          { "label": "猎头顾问" },
+          { "label": "市场调研" },
+          { "label": "其他咨询顾问" }
+        ]
+      },
+      {
+        "label": "律师",
+        "children": [
+          { "label": "专利律师" },
+          { "label": "知识产权律师" },
+          { "label": "律师助理" },
+          { "label": "事务所律师" },
+          { "label": "法务" }
+        ]
+      },
+      {
+        "label": "翻译",
+        "children": [
+          { "label": "英语翻译" },
+          { "label": "日语翻译" },
+          { "label": "韩语/朝鲜语翻译" },
+          { "label": "法语翻译" },
+          { "label": "德语翻译" },
+          { "label": "俄语翻译" },
+          { "label": "西班牙语翻译" },
+          { "label": "其他语种翻译" }
+        ]
+      },
+      { "label": "其他咨询类职位", "children": [{ "label": "其他咨询/翻译类职位" }] }
+    ]
+  },
+  {
+    "label": "旅游",
+    "children": [
+      {
+        "label": "旅游服务",
+        "children": [{ "label": "计调" }, { "label": "签证专员" }, { "label": "导游" }, { "label": "预定票务" }, { "label": "讲解员" }]
+      },
+      { "label": "旅游产品开发/策划", "children": [{ "label": "旅游产品经理" }, { "label": "旅游策划师" }] },
+      { "label": "其他旅游职位", "children": [{ "label": "其他旅游职位" }] }
+    ]
+  },
+  {
+    "label": "服务业",
+    "children": [
+      {
+        "label": "餐饮",
+        "children": [
+          { "label": "奶茶店店员" },
+          { "label": "水台" },
+          { "label": "面包/烘焙师" },
+          { "label": "餐饮储备店长/干部" },
+          { "label": "调酒师" },
+          { "label": "后厨" },
+          { "label": "配菜打荷" },
+          { "label": "茶艺师" },
+          { "label": "蛋糕/裱花师" },
+          { "label": "餐饮学徒" },
+          { "label": "面点师" },
+          { "label": "行政总厨" },
+          { "label": "厨师长" },
+          { "label": "传菜员" },
+          { "label": "洗碗工" },
+          { "label": "凉菜厨师" },
+          { "label": "中餐厨师" },
+          { "label": "西餐厨师" },
+          { "label": "日料厨师" },
+          { "label": "烧烤师傅" },
+          { "label": "收银" },
+          { "label": "服务员" },
+          { "label": "厨师" },
+          { "label": "咖啡师" },
+          { "label": "送餐员" },
+          { "label": "餐饮店长" },
+          { "label": "前厅经理/领班" }
+        ]
+      },
+      {
+        "label": "酒店",
+        "children": [
+          { "label": "民宿管家" },
+          { "label": "礼仪/迎宾/接待" },
+          { "label": "酒店前厅经理" },
+          { "label": "客房经理" },
+          { "label": "酒店前台" },
+          { "label": "客房服务员" },
+          { "label": "酒店经理" }
+        ]
+      },
+      {
+        "label": "零售",
+        "children": [
+          { "label": "督导/巡店" },
+          { "label": "陈列员" },
+          { "label": "理货员" },
+          { "label": "防损员" },
+          { "label": "卖场经理" },
+          { "label": "促销员" },
+          { "label": "导购" },
+          { "label": "店员/营业员" },
+          { "label": "门店店长" }
+        ]
+      },
+      {
+        "label": "美容保健",
+        "children": [
+          { "label": "纹绣师" },
+          { "label": "美体师" },
+          { "label": "美发助理/学徒" },
+          { "label": "美容店长" },
+          { "label": "足疗师" },
+          { "label": "按摩师" },
+          { "label": "美睫师" },
+          { "label": "采耳师" },
+          { "label": "发型师" },
+          { "label": "美甲师" },
+          { "label": "化妆师" },
+          { "label": "养发师" },
+          { "label": "理疗师" },
+          { "label": "针灸推拿" },
+          { "label": "美容师" }
+        ]
+      },
+      {
+        "label": "运动健身",
+        "children": [
+          { "label": "救生员" },
+          { "label": "瑜伽老师" },
+          { "label": "游泳教练" },
+          { "label": "舞蹈老师" },
+          { "label": "健身教练" }
+        ]
+      },
+      {
+        "label": "汽车服务",
+        "children": [
+          { "label": "洗车工" },
+          { "label": "加油员" },
+          { "label": "汽车服务顾问" },
+          { "label": "汽车维修" },
+          { "label": "汽车美容" },
+          { "label": "汽车查勘定损" },
+          { "label": "二手车评估师" },
+          { "label": "S店店长/维修站长" },
+          { "label": "汽车改装工程师" }
+        ]
+      },
+      { "label": "婚礼/花艺", "children": [{ "label": "花艺师" }, { "label": "婚礼策划" }] },
+      { "label": "宠物服务", "children": [{ "label": "宠物美容" }, { "label": "宠物医生" }] },
+      {
+        "label": "安保/家政/维修",
+        "children": [
+          { "label": "保安" },
+          { "label": "保洁" },
+          { "label": "保姆" },
+          { "label": "月嫂" },
+          { "label": "育婴师" },
+          { "label": "护工" },
+          { "label": "安检员" },
+          { "label": "手机维修" },
+          { "label": "家电维修" },
+          { "label": "保安经理" },
+          { "label": "产后康复师" },
+          { "label": "押运员" },
+          { "label": "消防中控员" },
+          { "label": "保洁经理" },
+          { "label": "电脑维修" }
+        ]
+      },
+      { "label": "其他服务业职位", "children": [{ "label": "网吧网管" }, { "label": "其他服务业职位" }] }
+    ]
+  },
+  {
+    "label": "生产制造",
+    "children": [
+      {
+        "label": "环保",
+        "children": [
+          { "label": "环保工程师" },
+          { "label": "环评工程师" },
+          { "label": "EHS工程师" },
+          { "label": "碳排放管理师" },
+          { "label": "环境检测员" }
+        ]
+      },
+      {
+        "label": "能源/地质",
+        "children": [{ "label": "地质工程师" }, { "label": "光伏系统工程师" }, { "label": "风电运维工程师" }, { "label": "水利工程师" }]
+      },
+      {
+        "label": "生产营运",
+        "children": [
+          { "label": "厂务" },
+          { "label": "厂长" },
+          { "label": "生产总监" },
+          { "label": "车间主任" },
+          { "label": "生产组长/拉长" },
+          { "label": "生产设备管理员" },
+          { "label": "生产计划/物料管理(PMC)" },
+          { "label": "生产文员" }
+        ]
+      },
+      {
+        "label": "质量安全",
+        "children": [
+          { "label": "质检员" },
+          { "label": "计量工程师" },
+          { "label": "安全评价师" },
+          { "label": "质量管理/测试" },
+          { "label": "可靠度工程师" },
+          { "label": "失效分析工程师" },
+          { "label": "产品认证工程师" },
+          { "label": "体系工程师" },
+          { "label": "体系审核员" },
+          { "label": "生产安全员" },
+          { "label": "汽车质量工程师" }
+        ]
+      },
+      { "label": "新能源", "children": [{ "label": "电池工程师" }, { "label": "电机工程师" }, { "label": "线束设计" }] },
+      {
+        "label": "汽车制造",
+        "children": [
+          { "label": "汽车设计" },
+          { "label": "车身/造型设计" },
+          { "label": "底盘工程师" },
+          { "label": "动力系统工程师" },
+          { "label": "汽车电子工程师" },
+          { "label": "汽车零部件设计" },
+          { "label": "汽车项目管理" },
+          { "label": "内外饰设计工程师" },
+          { "label": "总装工程师" }
+        ]
+      },
+      {
+        "label": "机械设计/制造",
+        "children": [
+          { "label": "液压工程师" },
+          { "label": "热设计工程师" },
+          { "label": "机械工程师" },
+          { "label": "机械设备工程师" },
+          { "label": "机械维修/保养" },
+          { "label": "机械制图员" },
+          { "label": "机械结构工程师" },
+          { "label": "工业工程师(IE)" },
+          { "label": "工艺工程师" },
+          { "label": "材料工程师" },
+          { "label": "机电工程师" },
+          { "label": "CNC/数控" },
+          { "label": "冲压工程师" },
+          { "label": "夹具工程师" },
+          { "label": "模具工程师" },
+          { "label": "焊接工程师" },
+          { "label": "注塑工程师" },
+          { "label": "铸造/锻造工程师" }
+        ]
+      },
+      {
+        "label": "化工",
+        "children": [
+          { "label": "化工项目经理" },
+          { "label": "化工工程师" },
+          { "label": "实验室技术员" },
+          { "label": "涂料研发" },
+          { "label": "化妆品研发" },
+          { "label": "食品/饮料研发" }
+        ]
+      },
+      {
+        "label": "服装/纺织/皮革",
+        "children": [
+          { "label": "量体师" },
+          { "label": "服装/纺织设计" },
+          { "label": "面料辅料开发" },
+          { "label": "打样/制版" },
+          { "label": "服装/纺织/皮革跟单" }
+        ]
+      },
+      {
+        "label": "技工/普工",
+        "children": [
+          { "label": "普工/操作工" },
+          { "label": "挖掘机司机" },
+          { "label": "弱电工" },
+          { "label": "裁剪工" },
+          { "label": "水电工" },
+          { "label": "叉车工" },
+          { "label": "铲车司机" },
+          { "label": "焊工" },
+          { "label": "氩弧焊工" },
+          { "label": "电工" },
+          { "label": "木工" },
+          { "label": "油漆工" },
+          { "label": "车工" },
+          { "label": "磨工" },
+          { "label": "铣工" },
+          { "label": "钳工" },
+          { "label": "钻工" },
+          { "label": "铆工" },
+          { "label": "钣金工" },
+          { "label": "抛光工" },
+          { "label": "机修工" },
+          { "label": "折弯工" },
+          { "label": "电镀工" },
+          { "label": "喷塑工" },
+          { "label": "注塑工" },
+          { "label": "组装工" },
+          { "label": "包装工" },
+          { "label": "空调工" },
+          { "label": "电梯工" },
+          { "label": "锅炉工" },
+          { "label": "学徒工" },
+          { "label": "缝纫工" },
+          { "label": "搬运工/装卸工" },
+          { "label": "切割工" },
+          { "label": "样衣工" },
+          { "label": "模具工" }
+        ]
+      },
+      { "label": "其他生产制造职位", "children": [{ "label": "其他生产制造职位" }] }
+    ]
+  },
+  { "label": "其他", "children": [{ "label": "其他职位类别", "children": [{ "label": "其他职位" }] }] }
+]

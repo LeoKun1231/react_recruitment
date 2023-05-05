@@ -1,48 +1,13 @@
 /* reset.css样式重置文件 */
 /* margin/padding重置 */
-a,
-address,
-b,
-big,
-blockquote,
+
+@import '../fonts/aliFont.css';
 body,
-center,
-cite,
-code,
-dd,
-del,
-div,
-dl,
-dt,
-em,
-fieldset,
-font,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-html,
-i,
-iframe,
-img,
-ins,
-label,
-legend,
-li,
-ol,
-p,
-pre,
-small,
-span,
-strong,
-u,
-ul,
-var {
+html {
   padding: 0;
   margin: 0;
+  // 设置为阿里字体
+  font-family: AlibabaPuHuiTiR !important;
 }
 
 /* a元素重置 */
@@ -56,15 +21,46 @@ img {
   vertical-align: top;
 }
 
-/* ul, ol, li重置 */
-ul,
-ol,
-li {
-  list-style: none;
+.ant-btn-primary:disabled {
+  background-color: #abcdff;
+  border-color: #abcdff;
+  color: #fff;
 }
 
-/* 对斜体元素重置 */
-i,
-em {
-  font-style: normal;
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  // 设置为阿里字体
+  font-family: AlibabaPuHuiTiR !important;
+}
+
+.ant-spin-nested-loading,
+.ant-spin-container {
+  height: 100vh;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* 整个滚动条 */
+::-webkit-scrollbar {
+  /* 对应纵向滚动条的宽度 */
+  width: 10px;
+  /* 对应横向滚动条的宽度 */
+  height: 10px;
+}
+
+/* 滚动条上的滚动滑块 */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(159, 162, 162, 0.4);
+  border-radius: 32px;
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background-color: rgba(159, 162, 162, 0.4);
+  border-radius: 32px;
 }

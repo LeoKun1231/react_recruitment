@@ -1,0 +1,94 @@
+{
+  "baseInfo": {
+    "job": "HR",
+    "name": "张伟",
+    "politics": "中共党员",
+    "sex": "男",
+    "telephone": "138-8888-8888",
+    "email": "1024983409@qq.com",
+    "likeCity": "福州",
+    "years": "21",
+    "customs": ["111", "222222"]
+  },
+  "companyExperience": [
+    {
+      "id": "1",
+      "companyName": "美图",
+      "jobName": "HR1",
+      "department": "人力资源部1",
+      "companyCity": "福州1",
+      "workTime": ["2012-01", "2012-05"],
+      "formText": {
+        "value": "<p>11111111111111111</p>"
+      }
+    },
+    {
+      "id": "2",
+      "companyName": "百度",
+      "jobName": "HR2",
+      "department": "人力资源部2",
+      "companyCity": "福州2",
+      "workTime": ["2012-01", "2012-05"],
+      "formText": {
+        "value": "<p>22222222222</p>"
+      }
+    }
+  ],
+  "educationInfo": [
+    {
+      "id": "1",
+      "schoolName": "清华大学",
+      "majorName": "计算机科学与技术",
+      "schoolCity": "北京",
+      "educationBackground": "本科",
+      "schoolTime": null,
+      "formText": {
+        "value": "<p>11111111111111111111111111</p>"
+      }
+    },
+    {
+      "id": "2",
+      "schoolName": "北京大学",
+      "majorName": "财务管理",
+      "schoolCity": "北京",
+      "educationBackground": "本科",
+      "schoolTime": null,
+      "formText": {
+        "value": "<p>22222222222222222222222222222</p>"
+      }
+    }
+  ],
+  "honoray": [
+    {
+      "id": "1",
+      "awardName": "国家奖学金",
+      "awardTime": "2014-01"
+    },
+    {
+      "id": "2",
+      "awardName": "国家奖学金",
+      "awardTime": "2015-01"
+    }
+  ],
+  "majorSkill": {
+    "value": "<p>请填写属于你自己的专业技能</p>"
+  },
+  "schoolExperience": [
+    {
+      "id": "1",
+      "schoolSumary": "经历简要: 如社团名称",
+      "schoolDuty": "担任职责：如班长、部长",
+      "workTime": ["2012-01", "2012-05"],
+      "formText": {
+        "value": "<p>2222222222222222222</p>"
+      }
+    }
+  ],
+  "skillsAndCertificate": {
+    "skills": "技能名称（程度描述），如：PPT（可设计模版）",
+    "certificate": "证书名称（程度描述），如：CFA（二级）",
+    "lang": "语言名称（程度描述），如：英语（CET-6）",
+    "hobby": "兴趣名称（程度描述），如：篮球（校队队长）",
+    "activity": "活动名称（程度描述），如：XX公众号（运营）"
+  }
+}

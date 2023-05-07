@@ -39,11 +39,12 @@ const CommentChildren: FC<IProps> = (props) => {
     //取反
     setIsShowChildren((b: boolean) => !b)
   })
-  const { id, nickName, roleId } = useAppSelector((state) => {
+  const { id, nickName, roleId, avatar } = useAppSelector((state) => {
     return {
       id: state.login.loginUser.id,
       nickName: state.login.loginUser.nickName,
-      roleId: state.login.loginUser.roleId
+      roleId: state.login.loginUser.roleId,
+      avatar: state.login.loginUser.avatar
     }
   }, useAppShallowEqual)
   console.log(id, '=====')
@@ -70,7 +71,7 @@ const CommentChildren: FC<IProps> = (props) => {
           nickname: nickName,
           target: comment.nickname,
           targetContent: comment.content,
-          avatar: '',
+          avatar,
           isLike: false,
           createTime: new Date() + '',
           commentCount: 0,

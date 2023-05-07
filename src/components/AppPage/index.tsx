@@ -2,7 +2,7 @@
  * @Author: hqk
  * @Date: 2023-03-24 13:02:02
  * @LastEditors: hqk
- * @LastEditTime: 2023-04-29 09:59:05
+ * @LastEditTime: 2023-05-07 11:14:44
  * @Description:
  */
 import React, { ElementRef, forwardRef, memo, useEffect, useImperativeHandle, useRef, useState } from 'react'
@@ -19,7 +19,6 @@ import {
   addDataAction,
   batchDeleteDataAction,
   changeSeachParamsAction,
-  checkAdminPhoneAction,
   getDataListAction,
   resetPageAction,
   updateDataByIdAction
@@ -106,15 +105,6 @@ const AppPage = forwardRef<IHandler, IProps>((props, ref) => {
     if (!isEdit) {
       try {
         await form.validateFields()
-
-        const telephone = form.getFieldValue('telephone')
-        if (telephone) {
-          const res = await dispatch(checkAdminPhoneAction(telephone)).unwrap()
-          if (res.code != 200) {
-            return Promise.reject()
-          }
-        }
-
         const res = await dispatch(addDataAction({ page, data: form.getFieldsValue(), isFullPage })).unwrap()
         if (res.code == 200) {
           form.resetFields()
@@ -128,13 +118,6 @@ const AppPage = forwardRef<IHandler, IProps>((props, ref) => {
     } else {
       try {
         await form.validateFields()
-        const telephone = form.getFieldValue('telephone')
-        if (telephone) {
-          const res = await dispatch(checkAdminPhoneAction(telephone)).unwrap()
-          if (res.code != 200) {
-            return Promise.reject()
-          }
-        }
         const res = await dispatch(updateDataByIdAction({ page, isFullPage, data: { ...form.getFieldsValue(), id: editId } })).unwrap()
         if (res.code == 200) {
           form.resetFields()

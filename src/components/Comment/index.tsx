@@ -37,12 +37,13 @@ const Comment: FC<IProps> = (props) => {
   const appConfirmModal = useRef<ElementRef<typeof AppConfirmModal>>(null)
   const appReportModal = useRef<ElementRef<typeof AppReportConfirm>>(null)
 
-  const { isCommentChildrenLoading, id, nickName, roleId } = useAppSelector((state) => {
+  const { isCommentChildrenLoading, id, nickName, roleId, avatar } = useAppSelector((state) => {
     return {
       isCommentChildrenLoading: state.community.isCommentChildrenLoading,
       id: state.login.loginUser.id,
       nickName: state.login.loginUser.nickName,
-      roleId: state.login.loginUser.roleId
+      roleId: state.login.loginUser.roleId,
+      avatar: state.login.loginUser.avatar
     }
   }, useAppShallowEqual)
   const { handleLike, isLike, likeCount } = useLike(comment, false, id)
@@ -79,7 +80,7 @@ const Comment: FC<IProps> = (props) => {
           nickname: nickName,
           target: comment.nickname,
           targetContent: comment.content,
-          avatar: '',
+          avatar,
           isLike: false,
           createTime: new Date() + '',
           commentCount: 0,

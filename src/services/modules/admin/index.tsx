@@ -215,9 +215,3 @@ export function changeBannerStatus(id: number) {
     url: `/company/banner/changeStatus/${id}`
   })
 }
-
-export function checkAdminPhone(telephone: number) {
-  return appRequest.get({
-    url: `/user/login/admin/checkPhone/${telephone}`
-  })
-}

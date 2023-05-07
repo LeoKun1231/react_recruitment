@@ -69,13 +69,14 @@ const ArticleDetail: FC<IProps> = (props) => {
     setValue(e.target.value)
   })
 
-  const { commentList, totalCount, isCommentLoading, userId, nickName } = useAppSelector((state) => {
+  const { commentList, totalCount, isCommentLoading, userId, nickName, avatar } = useAppSelector((state) => {
     return {
       commentList: state.community.commentList,
       totalCount: state.community.commentCount,
       isCommentLoading: state.community.isCommentLoading,
       userId: state.login.loginUser.id,
-      nickName: state.login.loginUser.nickName
+      nickName: state.login.loginUser.nickName,
+      avatar: state.login.loginUser.avatar
     }
   }, useAppShallowEqual)
   const dispatch = useAppDispatch()
@@ -89,7 +90,7 @@ const ArticleDetail: FC<IProps> = (props) => {
           rootId: 0,
           content: value,
           nickname: nickName,
-          avatar: '',
+          avatar,
           target: '',
           targetContent: '',
           isLike: false,

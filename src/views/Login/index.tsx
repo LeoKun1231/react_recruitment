@@ -2,7 +2,7 @@
  * @Author: hqk
  * @Date: 2023-02-24 10:39:49
  * @LastEditors: hqk
- * @LastEditTime: 2023-04-29 20:42:46
+ * @LastEditTime: 2023-05-07 15:37:11
  * @Description:
  */
 import React, { memo, useContext, useEffect } from 'react'
@@ -18,6 +18,8 @@ interface IProps {
   children?: ReactNode
 }
 
+const keys = ['account-checked', 'phone-checked', 'account-password', ' account', ' phone']
+
 const Login: FC<IProps> = () => {
   const tim = useContext(TimContext)
 
@@ -30,8 +32,13 @@ const Login: FC<IProps> = () => {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    localStorage.clear()
-    sessionStorage.clear()
+    for (let i = 0; i < localStorage.length; i++) {
+      if (localStorage.key(i)) {
+        if (keys.includes(localStorage.key(i)!)) {
+          localStorage.getItem(localStorage.key(i)!)
+        }
+      }
+    }
     dispatch(clearAllAction())
     sessionStorage.removeItem('persist:root')
     tim?.logout()

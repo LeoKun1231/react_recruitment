@@ -68,8 +68,8 @@ const AppHeader: FC<IProps> = () => {
   }, useAppShallowEqual)
 
   const dispatch = useAppDispatch()
-  const handleGoToAdmin = useMemoizedFn(() => {
-    dispatch(getMenuListByRoleIdAction(roleId))
+  const handleGoToAdmin = useMemoizedFn(async () => {
+    await dispatch(getMenuListByRoleIdAction(roleId))
     navigate('/admin')
   })
 

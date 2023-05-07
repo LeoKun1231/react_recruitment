@@ -2,10 +2,10 @@
  * @Author: hqk
  * @Date: 2023-02-04 11:54:17
  * @LastEditors: hqk
- * @LastEditTime: 2023-04-11 14:51:02
+ * @LastEditTime: 2023-05-07 11:23:40
  * @Description:
  */
-import { changeBannerStatus, checkAdminPhone, getBannerDetail, getTopicList, removeBannerImage, saveBanner } from '@/services'
+import { changeBannerStatus, getBannerDetail, getTopicList, removeBannerImage, saveBanner } from '@/services'
 import {
   addJob,
   addTopic,
@@ -275,10 +275,6 @@ export const saveBannerAction = useAppCreateAsyncThunk('admin/saveBanner', async
 })
 export const changeBannerStatusAction = useAppCreateAsyncThunk('admin/changeBannerStatus', async (data: number) => {
   const res = await changeBannerStatus(data)
-  return res
-})
-export const checkAdminPhoneAction = useAppCreateAsyncThunk('admin/checkAdminPhone', async (data: number) => {
-  const res = await checkAdminPhone(data)
   return res
 })
 

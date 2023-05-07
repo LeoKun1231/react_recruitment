@@ -30,6 +30,7 @@ const Login: FC<IProps> = () => {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
+    localStorage.clear()
     sessionStorage.clear()
     dispatch(clearAllAction())
     sessionStorage.removeItem('persist:root')

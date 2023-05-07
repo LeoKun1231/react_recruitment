@@ -2,7 +2,7 @@
  * @Author: hqk
  * @Date: 2023-02-24 10:39:49
  * @LastEditors: hqk
- * @LastEditTime: 2023-05-07 15:37:11
+ * @LastEditTime: 2023-05-07 16:16:12
  * @Description:
  */
 import React, { memo, useContext, useEffect } from 'react'
@@ -13,16 +13,16 @@ import LoginPanel from './c-cpns/login-panel/login-panel'
 import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
 import { clearAllAction, saveLoginUserAction } from '@/store'
 import { TimContext } from '@/Context'
+import { useLocation } from 'react-router-dom'
 
 interface IProps {
   children?: ReactNode
 }
 
-const keys = ['account-checked', 'phone-checked', 'account-password', ' account', ' phone']
+const keys = ['account-checked', 'phone-checked', 'account-password', 'account', 'phone']
 
 const Login: FC<IProps> = () => {
   const tim = useContext(TimContext)
-
   const { showForget } = useAppSelector((state) => {
     return {
       showForget: state.login.showForget
@@ -34,8 +34,8 @@ const Login: FC<IProps> = () => {
   useEffect(() => {
     for (let i = 0; i < localStorage.length; i++) {
       if (localStorage.key(i)) {
-        if (keys.includes(localStorage.key(i)!)) {
-          localStorage.getItem(localStorage.key(i)!)
+        if (!keys.includes(localStorage.key(i)!)) {
+          localStorage.removeItem(localStorage.key(i)!)
         }
       }
     }

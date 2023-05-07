@@ -2,7 +2,7 @@
  * @Author: hqk
  * @Date: 2023-03-04 14:36:30
  * @LastEditors: hqk
- * @LastEditTime: 2023-04-17 16:02:03
+ * @LastEditTime: 2023-05-07 18:05:00
  * @Description:
  */
 import React, { memo, useEffect, useRef, useState } from 'react'
@@ -11,7 +11,7 @@ import { HeaderWrapper } from './style'
 import Logo from '@/assets/img/logo.png'
 import { Tabs, Button, Avatar, Dropdown, MenuProps } from 'antd'
 import type { TabsProps } from 'antd'
-import { useHref, useLoaderData, useLocation, useNavigate } from 'react-router-dom'
+import { redirect, useHref, useLoaderData, useLocation, useNavigate } from 'react-router-dom'
 import { useCreation, useMemoizedFn } from 'ahooks'
 import { RightOutlined, UserOutlined } from '@ant-design/icons'
 import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
@@ -75,7 +75,7 @@ const AppHeader: FC<IProps> = () => {
 
   const handleLogout = useMemoizedFn(() => {
     dispatch(clearAllAction())
-    navigate('/login', { replace: true })
+    navigate('/login')
   })
 
   const handleGoProfile = useMemoizedFn(() => {

@@ -1,3 +1,10 @@
+/*
+ * @Author: hqk
+ * @Date: 2023-05-05 13:17:38
+ * @LastEditors: hqk
+ * @LastEditTime: 2023-05-07 16:43:34
+ * @Description:
+ */
 import React, { useEffect, memo, useState, forwardRef, useImperativeHandle } from 'react'
 import type { FC, ReactNode } from 'react'
 import { TUIKit } from 'hqk-leo-chat-uikit-react/src/index'
@@ -19,6 +26,7 @@ interface IHandler {
 
 const AppChat: FC<IProps> = memo((props) => {
   const { tim } = props
+  console.log(tim, '==========')
   return (
     <AppChatWrapper>
       <div style={{ height: '100%', width: '100%' }} className="aa">

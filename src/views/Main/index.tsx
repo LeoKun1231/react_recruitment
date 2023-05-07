@@ -2,7 +2,7 @@
  * @Author: hqk
  * @Date: 2023-02-03 20:24:33
  * @LastEditors: hqk
- * @LastEditTime: 2023-04-23 12:28:53
+ * @LastEditTime: 2023-05-07 18:16:46
  * @Description:
  */
 import React, { ElementRef, memo, Suspense, useEffect, useRef, useState } from 'react'
@@ -12,7 +12,7 @@ import AppHeader from '@/components/AppHeader'
 import AppFooter from '@/components/AppFooter'
 import { Spin, FloatButton, Modal, Badge } from 'antd'
 import { MessageOutlined } from '@ant-design/icons'
-import { useMemoizedFn } from 'ahooks'
+import { useMemoizedFn, useSafeState } from 'ahooks'
 import AppChat from '@/components/AppChat'
 import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
 import TIM, { ChatSDK } from 'tim-js-sdk/tim-js-friendship'
@@ -27,58 +27,64 @@ interface IProps {
   children?: ReactNode
 }
 
-const init = async (): Promise<ChatSDK> => {
+const init = async (id: number): Promise<ChatSDK> => {
   return new Promise((resolve, reject) => {
     const tim = TIM.create({ SDKAppID: SDKAPPID })
     tim?.registerPlugin({ 'tim-upload-plugin': TIMUploadPlugin })
     const onReady = () => {
       resolve(tim)
     }
-    tim.setLogLevel(4)
+    tim.setLogLevel(2)
     tim.on(TIM.EVENT.SDK_READY, onReady)
-    tim.login({
-      userID: store.getState().login.loginUser.id + '',
-      userSig: genTestUserSig(store.getState().login.loginUser.id + '').userSig
-    })
+    tim
+      .logout()
+      .then(() => {
+        tim.login({
+          userID: id + '',
+          userSig: genTestUserSig(id + '').userSig
+        })
+      })
+      .catch(() => {
+        tim.login({
+          userID: id + '',
+          userSig: genTestUserSig(id + '').userSig
+        })
+      })
   })
 }
 
 const Home: FC<IProps> = () => {
   const appChatRef = useRef<ElementRef<typeof AppChat>>(null)
-  const [toId, setToId] = useState(0)
-  const [jobId, setJobId] = useState('')
-  const [jobName, setJobName] = useState('')
-  const [userId, setUserId] = useState(0)
   const [unReadCount, setUnReadCount] = useState(0)
-
   const [tim, setTim] = useState<ChatSDK>()
 
   const dispatch = useAppDispatch()
 
-  const loadData = async () => {
-    const tim = await init()
+  const loadData = async (id: number) => {
+    const tim = await init(id)
     setTim(tim)
   }
 
-  const { jobInfo, isShowChat, roleId } = useAppSelector((state) => {
+  const { jobInfo, isShowChat, roleId, id } = useAppSelector((state) => {
     return {
       jobInfo: state.common.jobInfo,
       nickName: state.login.loginUser.nickName,
       userName: state.login.loginUser.userName,
       roleId: state.login.loginUser.roleId,
-      isShowChat: state.home.isShowChat
+      isShowChat: state.home.isShowChat,
+      id: state.login.loginUser.id
     }
   }, useAppShallowEqual)
 
   useEffect(() => {
-    if (roleId == ROLECODE.HR || ROLECODE.STUDENT == roleId) {
-      loadData()
-    }
+    loadData(id)
+
     return () => {
+      setTim(undefined)
       tim?.logout()
       tim?.destroy()
     }
-  }, [roleId])
+  }, [])
 
   const handleClick = useMemoizedFn(() => {
     appChatRef.current?.show()
@@ -91,6 +97,8 @@ const Home: FC<IProps> = () => {
         if (timer) clearInterval(timer)
         timer = setUnReadCount(tim.getTotalUnreadMessageCount())
       }, 1000)
+    } else {
+      clearInterval(timer)
     }
     return () => {
       clearInterval(timer)

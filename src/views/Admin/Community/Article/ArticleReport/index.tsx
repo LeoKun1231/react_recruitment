@@ -17,6 +17,7 @@ interface IProps {
   children?: ReactNode
   data: IReportArticle[]
   onClick: (id: number) => void
+  onChange: (select: number[]) => void
 }
 
 interface IHandler {
@@ -25,15 +26,16 @@ interface IHandler {
 }
 
 const ArticleReport = forwardRef<IHandler, IProps>((props, ref) => {
-  const { data, onClick } = props
+  const { data, onClick, onChange } = props
   const [selectIds, setSelectId] = useState<number[]>([])
 
   const handleChange = useMemoizedFn((e: CheckboxChangeEvent, id: number) => {
     e.stopPropagation()
-    console.log(e.target.checked, id)
     if (e.target.checked) {
+      onChange && onChange([...selectIds, id])
       setSelectId([...selectIds, id])
     } else {
+      onChange && onChange(selectIds.filter((item) => item != id))
       setSelectId(selectIds.filter((item) => item != id))
     }
   })

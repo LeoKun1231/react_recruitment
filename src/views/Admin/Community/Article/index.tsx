@@ -2,7 +2,7 @@
  * @Author: hqk
  * @Date: 2023-03-31 21:18:30
  * @LastEditors: hqk
- * @LastEditTime: 2023-04-07 11:50:12
+ * @LastEditTime: 2023-05-10 12:33:59
  * @Description:
  */
 import React, { ElementRef, memo, useEffect, useRef, useState } from 'react'
@@ -10,7 +10,7 @@ import type { FC, ReactNode } from 'react'
 import { ArticleWrapper } from './style'
 import { Tabs, Pagination, Button } from 'antd'
 import type { TabsProps } from 'antd'
-import { useCreation, useMemoizedFn } from 'ahooks'
+import { useCreation, useMemoizedFn, useSafeState } from 'ahooks'
 import ArticleReport from './ArticleReport'
 import { IReportArticle } from '@/types/home/community'
 import { useAppDispatch } from '@/hooks/useAppRedux'
@@ -32,6 +32,7 @@ const Article: FC<IProps> = () => {
   const [totalCount, setTotalCount] = useState(0)
   const [type, setType] = useState(1)
   const [articleId, setArticleId] = useState(-1)
+  const [isDisabled, setIsDisabled] = useSafeState(false)
 
   const articleReportRef = useRef<ElementRef<typeof ArticleReport>>(null)
   const appDrawerRef = useRef<ElementRef<typeof AppDrawer>>(null)
@@ -57,6 +58,7 @@ const Article: FC<IProps> = () => {
     setType(parseInt(type))
     setData([])
     setCurrentPage(1)
+    setIsDisabled(false)
     loadData(1, parseInt(type))
   })
 
@@ -84,7 +86,6 @@ const Article: FC<IProps> = () => {
 
   const handleDeleteConfirm = useMemoizedFn(async () => {
     const selects = articleReportRef.current?.getSelects()
-    // console.log(selects)
     const res = await dispatch(deleteReportAction({ page: 'article', data: selects! })).unwrap()
     if (res.code == 200) {
       setCurrentPage(1)
@@ -109,18 +110,22 @@ const Article: FC<IProps> = () => {
     }
   })
 
+  const handleChange = (select: number[]) => {
+    setIsDisabled(select.length > 0)
+  }
+
   const items: TabsProps['items'] = useCreation(
     useMemoizedFn(() => {
       return [
         {
           key: '1',
           label: `举报最多`,
-          children: <ArticleReport data={data} ref={articleReportRef} onClick={handleReportArtilce} />
+          children: <ArticleReport data={data} ref={articleReportRef} onClick={handleReportArtilce} onChange={handleChange} />
         },
         {
           key: '2',
           label: `最新举报`,
-          children: <ArticleReport data={data} ref={articleReportRef} onClick={handleReportArtilce} />
+          children: <ArticleReport data={data} ref={articleReportRef} onClick={handleReportArtilce} onChange={handleChange} />
         }
       ]
     }),
@@ -137,10 +142,10 @@ const Article: FC<IProps> = () => {
           onChange={onChange}
           tabBarExtraContent={
             <>
-              <Button icon={<EditOutlined />} type="primary" onClick={handleRecover}>
+              <Button icon={<EditOutlined />} type="primary" onClick={handleRecover} disabled={!isDisabled}>
                 恢复
               </Button>
-              <Button type="primary" className="ml-10px" icon={<DeleteOutlined />} onClick={handleDelete}>
+              <Button type="primary" className="ml-10px" icon={<DeleteOutlined />} onClick={handleDelete} disabled={!isDisabled}>
                 删除
               </Button>
             </>

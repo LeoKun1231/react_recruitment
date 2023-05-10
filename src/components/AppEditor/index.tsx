@@ -25,7 +25,7 @@ interface IProps {
 
 // 工具栏配置
 const toolbarConfig: Partial<IToolbarConfig> = {
-  excludeKeys: ['group-video', 'insertImage', 'insertTable']
+  excludeKeys: ['group-video', 'insertImage', 'insertTable', 'fullScreen']
 } // TS 语法
 
 const AppEditor: FC<IProps> = (props) => {

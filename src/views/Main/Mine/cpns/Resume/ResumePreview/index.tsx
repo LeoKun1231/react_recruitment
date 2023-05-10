@@ -152,20 +152,15 @@ const ResumePreview: FC<IProps> = (props) => {
   }, [previews])
 
   useEffect(() => {
+    console.log(customList, '==========')
     setArr((c) => {
+      let tempArr: any = []
+      tempArr = c
       for (const item of customList || []) {
-        let isExist = false
-        for (const iten of c) {
-          if (item.id == iten.id) {
-            isExist = true
-            break
-          }
-        }
-        if (!isExist) {
-          return [...c, item]
-        }
+        tempArr = c.filter((iten) => iten.id != item.id)
+        tempArr.push(item)
       }
-      return [...c]
+      return [...tempArr]
     })
   }, [customList])
 

@@ -152,7 +152,6 @@ const ResumePreview: FC<IProps> = (props) => {
   }, [previews])
 
   useEffect(() => {
-    console.log(customList, '==========')
     setArr((c) => {
       let tempArr: any = []
       tempArr = c

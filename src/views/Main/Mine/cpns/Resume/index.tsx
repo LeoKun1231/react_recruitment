@@ -13,7 +13,7 @@ import ResumePreview from './ResumePreview'
 import { TwitterPicker } from 'react-color'
 import { Button, Popover, Modal, Input, notification, Dropdown, Form, message } from 'antd'
 import { useCreation, useMemoizedFn } from 'ahooks'
-import { EditorComponent } from '@/constant'
+import { EditorComponent, ROLECODE } from '@/constant'
 import type { MenuProps } from 'antd'
 import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
 import { changeCustomListAction, changePreviewsAction, changeTemplateIdAction } from '@/store/features/resume'
@@ -82,11 +82,12 @@ const Resume: FC<IProps> = () => {
     document.documentElement.style.setProperty('--resume-color', value.hex)
   })
 
-  const { previews, customList, templateId } = useAppSelector((state) => {
+  const { previews, customList, templateId, roleId } = useAppSelector((state) => {
     return {
       previews: state.resume.previews,
       customList: state.resume.customList,
-      templateId: state.resume.templateId
+      templateId: state.resume.templateId,
+      roleId: state.login.loginUser.roleId
     }
   }, useAppShallowEqual)
 
@@ -217,9 +218,11 @@ const Resume: FC<IProps> = () => {
             <Button type="primary" ghost onClick={handleExport} className="ml-[10px]">
               导出
             </Button>
-            <Button type="primary" ghost onClick={handleSave} className="mx-[10px]">
-              保存到我的简历
-            </Button>
+            {roleId == ROLECODE.STUDENT && (
+              <Button type="primary" ghost onClick={handleSave} className="mx-[10px]">
+                保存到我的简历
+              </Button>
+            )}
             <Popover placement="bottom" content={<TemplatePreview onChange={handleTemplateChange} />} trigger="click">
               <Button type="primary" ghost>
                 更改模版

@@ -1,8 +1,8 @@
 /*
  * @Author: hqk
- * @Date: 2023-02-03 14:24:14
+ * @Date: 2023-02-16 11:20:26
  * @LastEditors: hqk
- * @LastEditTime: 2023-03-24 21:17:33
+ * @LastEditTime: 2023-05-21 23:21:27
  * @Description:
  */
 import React from 'react'
@@ -15,8 +15,8 @@ import App from '@/App'
 import '@unocss/reset/normalize.css'
 import '@/assets/css/index.less'
 
-import 'uno.css'
 import { Provider } from 'react-redux'
+import 'uno.css'
 import store from './store'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

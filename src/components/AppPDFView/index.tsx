@@ -27,11 +27,15 @@ interface IProps {
 
 const AppPDFView: FC<IProps> = (props) => {
   const { file } = props
+
   const [numPages, setNumPages] = useState(null)
+
   const [pageNumber, setPageNumber] = useState(1)
+
   function onDocumentLoadSuccess({ numPages }: any) {
     setNumPages(numPages)
   }
+
   const lastPage = () => {
     if (pageNumber == 1) {
       return
@@ -39,6 +43,7 @@ const AppPDFView: FC<IProps> = (props) => {
     const page = pageNumber - 1
     setPageNumber(page)
   }
+
   const nextPage = () => {
     if (pageNumber == numPages) {
       return
@@ -46,10 +51,12 @@ const AppPDFView: FC<IProps> = (props) => {
     const page = pageNumber + 1
     setPageNumber(page)
   }
+
   useEffect(() => {
     const el = document.querySelector('.pdf')
     el?.parentElement?.scrollTo(0, 0)
   }, [pageNumber])
+
   return (
     <AppPDFViewWrapper className="pdf">
       <Document file={file} onLoadSuccess={onDocumentLoadSuccess}>

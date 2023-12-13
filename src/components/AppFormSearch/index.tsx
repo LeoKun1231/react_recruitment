@@ -5,14 +5,13 @@
  * @LastEditTime: 2023-04-01 18:28:58
  * @Description:
  */
-import React, { memo, useState } from 'react'
-import type { FC, ReactNode } from 'react'
-import { AppFormSearchWrapper } from './style'
-import { ReloadOutlined, SearchOutlined } from '@ant-design/icons'
-import { Button, Col, DatePicker, Form, Input, Row, Select, Cascader, TreeSelect } from 'antd'
 import { ISearchConfig } from '@/types/common'
+import { ReloadOutlined, SearchOutlined } from '@ant-design/icons'
 import { useMemoizedFn } from 'ahooks'
-import { formatTime } from '@/utils/date'
+import { Button, Cascader, Col, DatePicker, Form, Input, Row, Select, TreeSelect } from 'antd'
+import type { FC, ReactNode } from 'react'
+import { memo } from 'react'
+import { AppFormSearchWrapper } from './style'
 interface IProps {
   children?: ReactNode
   searchConfig: ISearchConfig
@@ -37,7 +36,7 @@ const AppFormSearch: FC<IProps> = (props) => {
   const getFields = useMemoizedFn(() => {
     const children = []
     children.push(
-      items.map((item, index) => (
+      items.map(({ treeData, ...item }, index) => (
         <Col key={item.name + '' + index} span="6">
           {item.type == 'input' && (
             <Form.Item {...item}>
@@ -65,7 +64,7 @@ const AppFormSearch: FC<IProps> = (props) => {
           {item.type == 'tree' && (
             <Form.Item {...item}>
               <TreeSelect
-                treeData={item.treeData}
+                treeData={treeData}
                 allowClear
                 multiple
                 treeCheckable

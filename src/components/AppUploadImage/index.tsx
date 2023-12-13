@@ -1,10 +1,3 @@
-/*
- * @Author: hqk
- * @Date: 2023-04-08 12:20:10
- * @LastEditors: hqk
- * @LastEditTime: 2023-04-15 11:23:09
- * @Description:
- */
 import React, { forwardRef, memo, useImperativeHandle, useState } from 'react'
 import type { FC, ReactNode } from 'react'
 import { AppUploadImageWrapper } from './style'

@@ -5,20 +5,20 @@
  * @LastEditTime: 2023-04-12 12:30:23
  * @Description:
  */
-import React, { ElementRef, forwardRef, memo, useEffect, useImperativeHandle, useRef, useState } from 'react'
-import type { FC, ReactNode } from 'react'
-import { AppMenuWrapper } from './style'
-import { Menu } from 'antd'
-import type { MenuProps } from 'antd/es/menu'
 import { useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
 import { Icon } from '@iconify-icon/react'
-import { useMemoizedFn, useCreation } from 'ahooks'
+import { useMemoizedFn } from 'ahooks'
+import { Menu } from 'antd'
+import type { MenuProps } from 'antd/es/menu'
+import React, { ReactNode, forwardRef, memo, useEffect, useImperativeHandle, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { AppMenuWrapper } from './style'
 
 interface IProps {
   children?: ReactNode
   mode: 'inline' | 'vertical'
   theme: 'light' | 'dark'
+  collapsed: boolean
 }
 
 interface IHandler {
@@ -41,6 +41,7 @@ const AppMenu = forwardRef<IHandler, IProps>((props, ref) => {
   const { mode, theme } = props
   const navigate = useNavigate()
   const [openKeys, setOpenKeys] = useState(['/admin'])
+  const [tempOpenKeys, setTempOpenKeys] = useState<string[]>([])
 
   const location = useLocation()
   const { menuList } = useAppSelector((state) => {
@@ -67,8 +68,9 @@ const AppMenu = forwardRef<IHandler, IProps>((props, ref) => {
     )
   }, [menuList])
 
-  const handleMenuItemClick = useMemoizedFn(({ key }) => {
+  const handleMenuItemClick = useMemoizedFn(({ key }: { key: string }) => {
     setCurrent(key)
+    setTempOpenKeys([key.split('/').slice(0, -1).join('/')])
     setTimeout(() => {
       navigate(key, { replace: true })
     }, 300)
@@ -80,17 +82,22 @@ const AppMenu = forwardRef<IHandler, IProps>((props, ref) => {
       setCurrent(menuList[0]?.children[0]?.path)
       const key = menuList[0]?.children[0]?.path?.split('/').slice(0, -1).join('/')
       setOpenKeys([key])
+      setTempOpenKeys([key])
       navigate(menuList[0]?.children[0]?.path, { replace: true })
     } else {
       const key = path.split('/').slice(0, -1).join('/')
       setCurrent(path)
       setOpenKeys([key])
+      setTempOpenKeys([key])
       navigate(path, { replace: true })
     }
   }, [menuList])
 
-  const handleOpenChange = useMemoizedFn((key) => {
+  const handleOpenChange = useMemoizedFn((key: string[]) => {
     setOpenKeys(key)
+    if (key.length > 0) {
+      setTempOpenKeys(key.filter((item) => current.includes(item)))
+    }
   })
 
   useImperativeHandle(
@@ -104,6 +111,12 @@ const AppMenu = forwardRef<IHandler, IProps>((props, ref) => {
     },
     []
   )
+
+  useEffect(() => {
+    if (!props.collapsed && tempOpenKeys.length > 0) {
+      setOpenKeys(tempOpenKeys)
+    }
+  }, [props.collapsed])
 
   return (
     <AppMenuWrapper>

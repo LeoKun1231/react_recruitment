@@ -5,19 +5,19 @@
  * @LastEditTime: 2023-04-07 15:35:44
  * @Description:
  */
-import React, { ElementRef, memo, Suspense, useEffect, useRef, useState } from 'react'
-import type { FC, ReactNode } from 'react'
-import { AdminWrapper } from './style'
-import { MenuFoldOutlined, MenuUnfoldOutlined, FormOutlined, LoginOutlined } from '@ant-design/icons'
-import { Layout, Breadcrumb, theme, Switch, Popover, Spin, Button } from 'antd'
+import Logo from '@/assets/img/logo.png'
+import AppMenu from '@/components/AppMenu'
+import { useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
+import { mapPath2Breadcrumb } from '@/utils/map-utils'
+import { FormOutlined, LoginOutlined, MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
+import { useCreation, useMemoizedFn } from 'ahooks'
+import { Breadcrumb, Button, Layout, Popover, Switch, theme } from 'antd'
 import type { MenuTheme } from 'antd/es/menu'
 import classNames from 'classnames'
-import { useCreation, useMemoizedFn } from 'ahooks'
-import AppMenu from '@/components/AppMenu'
+import type { FC, ReactNode } from 'react'
+import { ElementRef, Suspense, memo, useEffect, useRef, useState } from 'react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
-import { useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
-import Logo from '@/assets/img/logo.png'
-import { mapPath2Breadcrumb } from '@/utils/map-utils'
+import { AdminWrapper } from './style'
 
 const { Header, Sider, Content } = Layout
 interface IProps {
@@ -115,7 +115,7 @@ const Admin: FC<IProps> = () => {
               </span>
             )}
           </h1>
-          <AppMenu mode={mode} theme={selftheme} ref={appMenuRef} />
+          <AppMenu collapsed={collapsed} mode={mode} theme={selftheme} ref={appMenuRef} />
         </Sider>
         <Layout className="flex h-[100vh]">
           <Header style={{ background: colorBgContainer }} className="between py-0 px-[10px] h-[48px] leading-[48px] mx-[16px] shadow-lg">

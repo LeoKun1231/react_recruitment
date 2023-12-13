@@ -1,10 +1,3 @@
-/*
- * @Author: hqk
- * @Date: 2023-02-16 11:20:26
- * @LastEditors: hqk
- * @LastEditTime: 2023-03-31 18:19:19
- * @Description:
- */
 import axios from 'axios'
 import type { AxiosInstance } from 'axios'
 import type { AppRequestConfig, AppInterceptors } from '../config/type'

@@ -1,8 +1,8 @@
 /*
  * @Author: hqk
  * @Date: 2023-03-16 10:33:31
- * @LastEditors: hqk
- * @LastEditTime: 2023-04-14 16:27:46
+ * @LastEditors: Leo
+ * @LastEditTime: 2023-08-02 18:30:56
  * @Description:
  */
 import React, { ChangeEvent, ElementRef, memo, useEffect, useRef, useState } from 'react'
@@ -215,11 +215,11 @@ const Resume: FC<IProps> = () => {
                 修改主题颜色
               </Button>
             </Popover>
-            <Button type="primary" ghost onClick={handleExport} className="ml-[10px]">
+            <Button type="primary" ghost onClick={handleExport} className="mx-[10px]">
               导出
             </Button>
             {roleId == ROLECODE.STUDENT && (
-              <Button type="primary" ghost onClick={handleSave} className="mx-[10px]">
+              <Button type="primary" ghost onClick={handleSave} className="mr-10px">
                 保存到我的简历
               </Button>
             )}

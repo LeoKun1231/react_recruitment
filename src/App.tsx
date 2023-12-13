@@ -1,10 +1,3 @@
-/*
- * @Author: hqk
- * @Date: 2023-02-03 14:24:14
- * @LastEditors: hqk
- * @LastEditTime: 2023-05-05 12:44:08
- * @Description:
- */
 import React, { Suspense, lazy, memo, useEffect, useState } from 'react'
 import { Await, useNavigate, useRoutes } from 'react-router-dom'
 import { ConfigProvider, Spin } from 'antd'

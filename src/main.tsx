@@ -5,16 +5,15 @@
  * @LastEditTime: 2023-05-22 00:50:05
  * @Description:
  */
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import App from '@/App'
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
+import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
-import App from '@/App'
+import { HashRouter } from 'react-router-dom'
 
-import '@unocss/reset/normalize.css'
 import '@/assets/css/index.less'
+import '@unocss/reset/normalize.css'
 
 import 'uno.css'
 import store from './store'
@@ -23,9 +22,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   // <React.StrictMode>
   <DndProvider backend={HTML5Backend}>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </DndProvider>
   // </React.StrictMode>

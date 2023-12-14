@@ -9,8 +9,8 @@ import { useAppDispatch } from '@/hooks/useAppRedux'
 import { changeCompanyActiveAction } from '@/store/features/admin'
 import { useMemoizedFn } from 'ahooks'
 import { Switch } from 'antd'
-import React, { memo, useEffect, useState } from 'react'
 import type { FC, ReactNode } from 'react'
+import { useEffect, useState } from 'react'
 
 interface IProps {
   children?: ReactNode
@@ -22,17 +22,29 @@ interface IProps {
 const MySwitch: FC<IProps> = (props) => {
   const { value, status, id } = props
   const [myStatus, setMyStatus] = useState(value)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setMyStatus(value)
   }, [value])
   const dispatch = useAppDispatch()
-  const handleChange = useMemoizedFn((e) => {
+  const handleChange = useMemoizedFn(async (e) => {
+    setLoading(true)
+    await dispatch(changeCompanyActiveAction(id))
+    setLoading(false)
     setMyStatus(e)
-    dispatch(changeCompanyActiveAction(id))
   })
 
-  return <Switch checkedChildren="启用" unCheckedChildren="关闭" disabled={status != 2} checked={myStatus == 1} onChange={handleChange} />
+  return (
+    <Switch
+      checkedChildren="启用"
+      loading={loading}
+      unCheckedChildren="关闭"
+      disabled={status != 2}
+      checked={myStatus == 1}
+      onChange={handleChange}
+    />
+  )
 }
 
 export default MySwitch

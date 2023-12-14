@@ -5,15 +5,10 @@
  * @LastEditTime: 2023-05-07 11:14:44
  * @Description:
  */
-import React, { ElementRef, forwardRef, memo, useEffect, useImperativeHandle, useRef, useState } from 'react'
-import type { FC, ReactNode } from 'react'
-import { AppPageWrapper } from './style'
-import AppFormSearch from '@/components/AppFormSearch'
-import { Button, Form, FormInstance, message } from 'antd'
-import { DeleteOutlined, UserAddOutlined } from '@ant-design/icons'
-import AppPageContent from '@/components/AppPageContent'
-import { useMemoizedFn } from 'ahooks'
+import AppConfirmModal from '@/components/AppConfirmModal'
 import AppDrawer from '@/components/AppDrawer'
+import AppFormSearch from '@/components/AppFormSearch'
+import AppPageContent from '@/components/AppPageContent'
 import { useAppDispatch } from '@/hooks/useAppRedux'
 import {
   addDataAction,
@@ -23,9 +18,14 @@ import {
   resetPageAction,
   updateDataByIdAction
 } from '@/store/features/admin'
-import classNames from 'classnames'
-import AppConfirmModal from '@/components/AppConfirmModal'
 import { ISearchConfig, ITableConfig } from '@/types/common'
+import { DeleteOutlined, UserAddOutlined } from '@ant-design/icons'
+import { useMemoizedFn } from 'ahooks'
+import { Button, Form, FormInstance } from 'antd'
+import classNames from 'classnames'
+import type { ReactNode } from 'react'
+import { ElementRef, forwardRef, memo, useEffect, useImperativeHandle, useRef, useState } from 'react'
+import { AppPageWrapper } from './style'
 
 interface IProps {
   children?: ReactNode

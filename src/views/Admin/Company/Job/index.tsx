@@ -5,19 +5,19 @@
  * @LastEditTime: 2023-04-10 22:26:09
  * @Description:
  */
-import React, { memo, useState, useRef, ElementRef, useEffect } from 'react'
-import type { FC, ReactNode } from 'react'
-import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
-import { JobWrapper } from './style'
-import JobInfo from './JobInfo'
-import AppPage from '@/components/AppPage'
-import { searchConfig } from './config/search.config'
-import { tableConifg } from './config/table.config'
-import { useCreation, useMemoizedFn } from 'ahooks'
-import { Button, Switch, Modal, List, Avatar } from 'antd'
-import { changeJobStatusAction } from '@/store/features/admin'
 import MyResumeBg from '@/assets/img/myresume_red.png'
 import AppPDFView from '@/components/AppPDFView'
+import AppPage from '@/components/AppPage'
+import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
+import { changeJobStatusAction } from '@/store/features/admin'
+import { useCreation, useMemoizedFn } from 'ahooks'
+import { Avatar, Button, List, Modal, Switch } from 'antd'
+import type { FC, ReactNode } from 'react'
+import { ElementRef, memo, useRef, useState } from 'react'
+import JobInfo from './JobInfo'
+import { searchConfig } from './config/search.config'
+import { tableConifg } from './config/table.config'
+import { JobWrapper } from './style'
 
 interface IProps {
   children?: ReactNode

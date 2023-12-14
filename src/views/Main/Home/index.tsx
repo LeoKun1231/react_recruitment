@@ -5,26 +5,22 @@
  * @LastEditTime: 2023-04-23 13:24:56
  * @Description:
  */
-import React, { Suspense, memo, useEffect, useMemo, useState } from 'react'
-import type { FC, ReactNode } from 'react'
-import { HomeWrapper } from './style'
-import AppRemoteSelect from '@/components/AppRemoteSelect'
-import { resetArticleSearchOptionsAction } from '@/store/features/community'
-import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
 import Job from '@/assets/data/job.json'
-import { Carousel, Spin } from 'antd'
 import Swiper01 from '@/assets/img/swiper_01.png'
-import Swiper02 from '@/assets/img/swiper_02.png'
-import { RightOutlined } from '@ant-design/icons'
-import { useEventEmitter, useMemoizedFn } from 'ahooks'
+import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
+import { changeIsHomeAction, getHomeBannerListAction } from '@/store'
+import { resetArticleSearchOptionsAction } from '@/store/features/community'
+import { useMemoizedFn } from 'ahooks'
+import { Carousel } from 'antd'
 import classNames from 'classnames'
-import HomeSection from './c-cpns/HomeSection'
+import type { FC, ReactNode } from 'react'
+import { memo, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import CompanyCategory from './c-cpns/CompanyCategory'
 import HotCompany from './c-cpns/HotCompany'
 import HotJob from './c-cpns/HotJob'
-import CompanyCategory from './c-cpns/CompanyCategory'
 import JobCategory from './c-cpns/JobCategory'
-import { Outlet, useNavigate } from 'react-router-dom'
-import { changeIsHomeAction, getHomeBannerListAction } from '@/store'
+import { HomeWrapper } from './style'
 interface IProps {
   children?: ReactNode
 }

@@ -5,22 +5,21 @@
  * @LastEditTime: 2023-03-06 11:20:11
  * @Description:
  */
-import React, { memo, useContext, useEffect, useState } from 'react'
-import type { FC, ReactNode } from 'react'
-import { AccountWrapper } from './style'
-import { Button, Checkbox, Form, Input, message } from 'antd'
-import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons'
-import { useAppDispatch } from '@/hooks/useAppRedux'
-import { changeLoginStatusAction, loginByAccountAction, turnToForgetPasswordAction } from '@/store/features/login'
-import { useVerifyModal } from '@/hooks/useVerify'
 import Verify from '@/components/Verify'
-import LoginAgree from '../login-agree/login-agree'
-import { useLocalStorageState, useMemoizedFn } from 'ahooks'
-import checkError from '@/utils/error'
-import classNames from 'classnames'
-import { useNavigate } from 'react-router-dom'
-import { genTestUserSig } from '@/utils/chat/GenerateTestUserSig'
+import { useAppDispatch } from '@/hooks/useAppRedux'
+import { useVerifyModal } from '@/hooks/useVerify'
 import { registerChatUserAction } from '@/store'
+import { loginByAccountAction, turnToForgetPasswordAction } from '@/store/features/login'
+import checkError from '@/utils/error'
+import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons'
+import { useLocalStorageState, useMemoizedFn } from 'ahooks'
+import { Button, Checkbox, Form, Input, message } from 'antd'
+import classNames from 'classnames'
+import type { FC, ReactNode } from 'react'
+import { memo, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import LoginAgree from '../login-agree/login-agree'
+import { AccountWrapper } from './style'
 
 interface IProps {
   children?: ReactNode
@@ -28,8 +27,8 @@ interface IProps {
 
 const LoginAccount: FC<IProps> = () => {
   const [checked, setChecked] = useLocalStorageState<boolean>('account-checked')
-  const [account, setAccount] = useLocalStorageState<string>('account')
-  const [password, setPassword] = useLocalStorageState<string>('account-password')
+  const [account, setAccount] = useLocalStorageState<string>('account', { defaultValue: '123456' })
+  const [password, setPassword] = useLocalStorageState<string>('account-password', { defaultValue: '123456' })
 
   const dispatch = useAppDispatch()
   const [isAgree, setIsAgree] = useState(false)

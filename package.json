@@ -11,7 +11,7 @@
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "commit": "pnpm cz"
+    "commit": "git add . &  pnpm cz"
   },
   "dependencies": {
     "@alex_xu/react-slider-vertify": "^1.2.0",

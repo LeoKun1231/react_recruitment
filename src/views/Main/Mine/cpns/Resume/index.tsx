@@ -5,24 +5,24 @@
  * @LastEditTime: 2023-08-02 18:30:56
  * @Description:
  */
-import React, { ChangeEvent, ElementRef, memo, useEffect, useRef, useState } from 'react'
+import AppConfirmModal from '@/components/AppConfirmModal'
+import { EditorComponent, ROLECODE } from '@/constant'
+import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
+import { uploadResumeAction } from '@/store'
+import { changeCustomListAction, changePreviewsAction, changeTemplateIdAction } from '@/store/features/resume'
+import { outputPDF } from '@/utils/pdf'
+import { useCreation, useMemoizedFn } from 'ahooks'
+import type { MenuProps } from 'antd'
+import { Button, Dropdown, Form, Input, Modal, Popover, message, notification } from 'antd'
+import classNames from 'classnames'
 import type { FC, ReactNode } from 'react'
-import { ResumeWrapper } from './style'
+import { ChangeEvent, ElementRef, memo, useEffect, useRef, useState } from 'react'
+import { TwitterPicker } from 'react-color'
+import { v4 } from 'uuid'
 import ResumeEditor from './ResumeEditor'
 import ResumePreview from './ResumePreview'
-import { TwitterPicker } from 'react-color'
-import { Button, Popover, Modal, Input, notification, Dropdown, Form, message } from 'antd'
-import { useCreation, useMemoizedFn } from 'ahooks'
-import { EditorComponent, ROLECODE } from '@/constant'
-import type { MenuProps } from 'antd'
-import { useAppDispatch, useAppSelector, useAppShallowEqual } from '@/hooks/useAppRedux'
-import { changeCustomListAction, changePreviewsAction, changeTemplateIdAction } from '@/store/features/resume'
-import { v4 } from 'uuid'
-import { outputPDF } from '@/utils/pdf'
-import classNames from 'classnames'
 import TemplatePreview from './ResumeSection/cpns/TemplatePreview'
-import AppConfirmModal from '@/components/AppConfirmModal'
-import { uploadResumeAction } from '@/store'
+import { ResumeWrapper } from './style'
 interface IProps {
   children?: ReactNode
 }
@@ -172,6 +172,7 @@ const Resume: FC<IProps> = () => {
     const footer = document.querySelector('.pdf-footer')
     try {
       message.loading({ content: '正在上传中，请不要做任何操作' })
+
       const res = await outputPDF({
         element: element,
         footer: footer,
@@ -234,7 +235,7 @@ const Resume: FC<IProps> = () => {
               </Button>
             </Dropdown>
           </div>
-          <div className="h-full w-full ml-[548px] " id="pdfExport">
+          <div className="h-full w-full ml-[548px] " id="print-operate-report">
             <ResumePreview onChangeComponent={handleComponentChange} />
             <div
               className="pdf-header"

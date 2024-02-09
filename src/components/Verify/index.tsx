@@ -71,7 +71,14 @@ const Verify = forwardRef<IHandler, IProps>((props, ref) => {
       {modalOpen && (
         <Modal title="安全验证" centered footer={null} open={modalOpen} getContainer={false} onCancel={handleCancel}>
           <div className={classnames({ 'animate-head-shake': isVerfiyFail })}>
-            <Vertify width={320} height={200} visible={visible} onSuccess={handleVerifySuccess} onFail={handleVerifyFailure} />
+            <Vertify
+              width={320}
+              height={200}
+              imgUrl={import.meta.env.VITE_BASE_URL + '/upload/banners/201.jpg'}
+              visible={visible}
+              onSuccess={handleVerifySuccess}
+              onFail={handleVerifyFailure}
+            />
           </div>
         </Modal>
       )}

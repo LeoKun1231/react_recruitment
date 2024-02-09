@@ -74,7 +74,7 @@ const Verify = forwardRef<IHandler, IProps>((props, ref) => {
             <Vertify
               width={320}
               height={200}
-              imgUrl={import.meta.env.VITE_BASE_URL + '/upload/banners/201.jpg'}
+              imgUrl={'https://recruitment.hqk10.top/images/201.jpg'}
               visible={visible}
               onSuccess={handleVerifySuccess}
               onFail={handleVerifyFailure}
